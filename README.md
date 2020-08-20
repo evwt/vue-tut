@@ -77,7 +77,7 @@ html, body {
 </style>
 ```
 
-<a href="https://codesandbox.io/s/zealous-grass-czz5i?fontsize=14&hidenavigation=1&theme=light" target="_blank"><img width="995" alt="Screen Shot 2020-08-20 at 6 00 39 PM" src="https://user-images.githubusercontent.com/611996/90834109-12581b00-e30f-11ea-91b2-e46a6f7d3b65.png"></a>
+<a href="https://codesandbox.io/s/zealous-grass-czz5i?fontsize=14&hidenavigation=1&theme=light" target="_blank"><img width="994" alt="Screen Shot 2020-08-20 at 6 00 39 PM" src="https://user-images.githubusercontent.com/611996/90835167-7b409280-e311-11ea-8e2d-5a685f46ad64.png"></a>
 
    
 [![Edit zealous-grass-czz5i](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/zealous-grass-czz5i?fontsize=14&hidenavigation=1&theme=light)
