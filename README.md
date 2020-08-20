@@ -79,9 +79,8 @@ html, body {
 
 ## Examples
 
-<a href="https://codesandbox.io/s/zealous-grass-czz5i?fontsize=14&hidenavigation=1&theme=light" target="_blank"><img width="994" alt="Screen Shot 2020-08-20 at 6 00 39 PM" src="https://user-images.githubusercontent.com/611996/90835167-7b409280-e311-11ea-8e2d-5a685f46ad64.png"></a>
+<a href="https://czz5i.csb.app/" target="_blank"><img width="994" alt="Screen Shot 2020-08-20 at 6 00 39 PM" src="https://user-images.githubusercontent.com/611996/90835167-7b409280-e311-11ea-8e2d-5a685f46ad64.png"></a>
    
 Hello World - _Theme: Vue, Language: Vue SFC, Editor Theme: Tomorrow Night_
-
 
 [![Edit zealous-grass-czz5i](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/zealous-grass-czz5i?fontsize=14&hidenavigation=1&theme=light)
