@@ -4,18 +4,22 @@
       <div class="step-container">
         <div class="step p-w-med p-e-xl p-n-lg p-s-lg">
           <main>
-            <label class="m-s-med">
+            <label class="step-label m-s-med">
+              <!-- The name of the step -->
               <slot name="name" />
+              <!-- Step # -->
               <template v-if="!$slots.name && index">
                 Step {{ index }}
               </template>
             </label>
 
+            <!-- The content of the step box -->
             <slot />
           </main>
         </div>
 
         <div class="step-aside">
+          <!-- The content to put aside the step box (or below on mobile) -->
           <slot name="aside" />
         </div>
       </div>
@@ -35,14 +39,14 @@ export default {
 
   data () {
     return {
-      intersected: 'not-intersected',
+      intersected: false,
       index: null
     };
   },
 
   computed: {
     intersectedClass() {
-      return this.intersected ? 'intersected' : '';
+      return this.intersected ? 'step-intersected' : '';
     }
   },
 

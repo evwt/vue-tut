@@ -1,5 +1,6 @@
 {
   "name": "vue-tut",
+  "description": "Easily build beautiful tutorials with Vue",
   "version": "0.1.0",
   "main": "dist/vue-tut.umd.js",
   "module": "dist/vue-tut.esm.js",
@@ -7,16 +8,19 @@
   "browser": {
     "./sfc": "src/vue-tut.vue"
   },
-  "private": true,
+  "license": "Apache-2.0",
+  "author": {
+    "name": "John Susek",
+    "email": "john@johnsolo.net"
+  },
   "scripts": {
-    "serve": "vue-cli-service serve",
+    "docs:vuese": "vuese gen",
     "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
     "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-tut.umd.js",
     "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-tut.esm.js",
     "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-tut.min.js",
     "build:watch": "nodemon --ignore dist/ -e scss,js,vue --exec npm run build",
-    "build:watch:scss": "nodemon --exec sass themes/vue.scss themes/vue.css; sass themes/azure.scss themes/azure.css;",
-    "lint": "vue-cli-service lint"
+    "build:watch:scss": "nodemon --exec 'sass themes/vue.scss dist/themes/vue.css && sass themes/azure.scss dist/themes/azure.css'"
   },
   "dependencies": {
     "core-js": "^3.6.5",
@@ -43,6 +47,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "rollup": "^2.26.4",
     "rollup-plugin-css-only": "^2.1.0",
+    "rollup-plugin-postcss": "^3.1.5",
     "rollup-plugin-scss": "^2.6.0",
     "rollup-plugin-vue": "^5.1.9",
     "sass": "^1.26.5",

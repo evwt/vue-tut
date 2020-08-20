@@ -1,10 +1,9 @@
 import path from 'path';
 import commonjs from '@rollup/plugin-commonjs';
 import vue from 'rollup-plugin-vue';
-import scss from 'rollup-plugin-scss';
 import resolve from '@rollup/plugin-node-resolve';
 import alias from '@rollup/plugin-alias';
-import css from 'rollup-plugin-css-only';
+import postcss from 'rollup-plugin-postcss';
 
 let customResolver = resolve({
   extensions: ['.js', '.scss', '.vue']
@@ -38,8 +37,9 @@ export default {
     }),
     resolve(),
     commonjs(),
-    css(),
-    scss(),
+    postcss({
+      extract: true
+    }),
     vue({
       css: true,
       compileTemplate: true

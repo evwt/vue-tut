@@ -48,14 +48,14 @@
 
   .prism-editor-wrapper .prism-editor__line-number.highlight-line {
     border-left: 5px solid var(--tut-color-accent);
-    background: #0173fe38;
+    background: #42b98338;
   }
 
   .prism-editor-wrapper .prism-editor__line-number.highlight-line:after {
-    background: #0173fe38;
+    background: #42b98338;
   }
 
-  .intersected .step {
+  .step-intersected .step {
     border-left: 10px solid var(--tut-color-accent);
   }
 }

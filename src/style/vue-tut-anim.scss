@@ -1,0 +1,13 @@
+.vue-tut {
+  .fade-enter-active {
+    transition: opacity .75s;
+  }
+
+  .fade-leave-active {
+    transition: opacity .75s;
+  }
+
+  .fade-enter, .fade-leave-to {
+    opacity: 0;
+  }
+}

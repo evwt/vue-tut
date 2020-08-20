@@ -1,6 +1,6 @@
 main.vue-tut {
   @media all and (max-width: 980px) {
-    > header {
+    .tutorial-header {
       padding: 15px;
       margin-bottom: 5px;
 
@@ -13,7 +13,7 @@ main.vue-tut {
       }
     }
 
-    .sections > section {
+    .sections .tutorial-section {
       margin: 15px;
     }
 
@@ -26,12 +26,12 @@ main.vue-tut {
       padding-top: 0;
     }
 
-    .steps > .contents {
-      max-width: 100%;
+    .steps > .step-contents {
+      width: 100%;
       margin: 0;
     }
 
-    .contents .step-aside {
+    .step-contents .step-aside {
       display: block;
 
       aside {
@@ -39,9 +39,17 @@ main.vue-tut {
         align-items: center;
         justify-content: center;
       }
+
+      pre {
+        white-space: pre;
+      }
+
+      .highlight-line:after {
+        width: calc(100vw - 62px) !important;
+      }
     }
 
-    .assets {
+    .step-assets {
       display: none;
     }
 

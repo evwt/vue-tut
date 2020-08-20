@@ -2,9 +2,10 @@
   background-color: #fff;
   color: #333;
   font-family: "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
   text-align: left;
 
-  > header {
+  .tutorial-header {
     padding: 50px;
 
     h1 {
@@ -20,166 +21,8 @@
     }
   }
 
-  .sections > section {
-    margin: 50px 50px;
-  }
-
-  .sections > section:last-child {
-    margin-bottom: 0;
-  }
-
-  .sections > section > header > h1 {
-    font-size: 20px;
-  }
-
-  .sections > section > header > h2 {
-    font-size: 26px;
-  }
-
-  .sections > section > header > p {
-    font-size: 16px;
-    line-height: 1.4;
-  }
-
-  .step-wrapper:not(:last-child) {
-    margin-bottom: 100px;
-  }
-
-  .step {
-    border-left: 10px solid transparent;
-    background-color: #f3f1f1;
-  }
-
-  .steps {
-    padding-top: 50px;
-  }
-
-  .steps > .contents {
-    max-width: 39%;
-    margin-right: 4%;
-    margin-top: 140px;
-    margin-bottom: 94vh;
-  }
-
-  .steps > .assets {
-    background: #2d2d2d;
-    color: #eee;
-    margin-right: -50px;
-    top: 0;
-    max-width: 920px;
-    width: calc(50vw + 8.33333%) !important;
-    height: calc(100vh + 1px);
-    max-height: 100%;
-    overflow-y: auto;
-    position: sticky;
-  }
-
-  .assets .step {
-    display: none;
-  }
-
-  .steps > .assets > .assets-inner {
-    position: relative;
-    height: 100%;
-  }
-
-  .steps > .assets > .assets-inner > div {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-  }
-
-  .steps > .assets > .assets-inner .asset-images {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    align-items: center;
-    justify-content: center;
-    padding: 5vw;
-    flex-direction: column;
-  }
-
-  .step-aside img {
-    object-fit: contain;
-    max-width: 100%;
-    max-height: 100%;
-  }
-
-  .fade-enter-active {
-    transition: opacity .75s;
-  }
-
-  .fade-leave-active {
-    transition: opacity .75s;
-  }
-
-  .fade-enter, .fade-leave-to {
-    opacity: 0;
-  }
-
-  .tutorial-highlighter {
-    // Matches the color theme
-    background: #2d2d2d;
-    color: #ccc;
-    font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-    font-size: 14px;
-    line-height: 1.5;
-    padding: 10px 5px 5px 0;
-  }
-
-  .prism-editor__textarea:focus {
-    outline: none;
-  }
-
-  .prism-editor-wrapper {
-    height: auto;
-  }
-
-  .prism-editor-wrapper .prism-editor__line-numbers {
-    margin-right: 20px;
-  }
-
-  .prism-editor-wrapper .prism-editor__line-number {
-    border-left: 5px solid transparent;
-    padding-left: 10px;
-  }
-
-  .prism-editor-wrapper .prism-editor__line-number.highlight-line {
-    border-left: 5px solid gray;
-    background: rgba(128, 128, 128, 0.384);
-  }
-
-  .prism-editor-wrapper .prism-editor__line-number.highlight-line:after {
-    content: '';
-    height: 21px;
-    background: rgba(128, 128, 128, 0.384);
-    position: absolute;
-    max-width: 920px;
-    width: calc(50vw + 8.33333%) !important;
-  }
-
-  .step label {
-    display: block;
-    font-weight: 600;
-    letter-spacing: 0.1px;
-  }
-
-  .step hr {
-    border-color: #ddd;
-    margin: 16px 0 15px 0;
-  }
-
-  .intersected .step {
-    border-left: 10px solid gray;
-  }
-
-  .intersected ~ .intersected .step {
-    border-left: 10px solid transparent;
-  }
-
-  .contents .step-aside {
+  // On desktop, we hide the asides in the contents
+  .step-contents .step-aside {
     display: none;
   }
 }
