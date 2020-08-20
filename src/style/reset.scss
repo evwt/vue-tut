@@ -1,0 +1,25 @@
+.vue-tut {
+  font-family: sans-serif;
+  min-height: 100%;
+
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.15;
+  }
+
+  hr {
+    height: 0;
+    border: 0;
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  *:before,
+  *:after {
+    box-sizing: border-box;
+  }
+}

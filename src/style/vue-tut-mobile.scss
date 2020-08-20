@@ -1,0 +1,52 @@
+main.vue-tut {
+  @media all and (max-width: 980px) {
+    > header {
+      padding: 15px;
+      margin-bottom: 5px;
+
+      > h1.m-s-sm {
+        margin-bottom: 5px;
+      }
+
+      > h2.m-s-xl {
+        margin-bottom: 15px;
+      }
+    }
+
+    .sections > section {
+      margin: 15px;
+    }
+
+    .step {
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .steps {
+      padding-top: 0;
+    }
+
+    .steps > .contents {
+      max-width: 100%;
+      margin: 0;
+    }
+
+    .contents .step-aside {
+      display: block;
+
+      aside {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .assets {
+      display: none;
+    }
+
+    .step-wrapper:first-child .step {
+      margin-top: 40px;
+    }
+  }
+}

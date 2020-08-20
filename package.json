@@ -1,17 +1,38 @@
 {
   "name": "vue-tut",
   "version": "0.1.0",
+  "main": "dist/vue-tut.umd.js",
+  "module": "dist/vue-tut.esm.js",
+  "unpkg": "dist/vue-tut.min.js",
+  "browser": {
+    "./sfc": "src/vue-tut.vue"
+  },
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-tut.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-tut.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-tut.min.js",
+    "build:watch": "nodemon --ignore dist/ -e scss,js,vue --exec npm run build",
+    "build:watch:scss": "nodemon --exec sass themes/vue.scss themes/vue.css; sass themes/azure.scss themes/azure.css;",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "vue": "^2.6.11"
+    "lodash": "^4.17.20",
+    "portal-vue": "1.5.1",
+    "prismjs": "^1.21.0",
+    "rollup-plugin-alias": "^2.2.0",
+    "vue-intersect": "^1.1.6",
+    "vue-prism-editor": "^1.2.2",
+    "webfontloader": "^1.6.28"
   },
   "devDependencies": {
+    "@rollup/plugin-alias": "^3.1.1",
+    "@rollup/plugin-buble": "^0.21.3",
+    "@rollup/plugin-commonjs": "^15.0.0",
+    "@rollup/plugin-node-resolve": "^9.0.0",
     "@vue/cli-plugin-babel": "~4.5.0",
     "@vue/cli-plugin-eslint": "~4.5.0",
     "@vue/cli-service": "~4.5.0",
@@ -20,8 +41,13 @@
     "eslint": "^6.7.2",
     "eslint-plugin-import": "^2.20.2",
     "eslint-plugin-vue": "^6.2.2",
+    "rollup": "^2.26.4",
+    "rollup-plugin-css-only": "^2.1.0",
+    "rollup-plugin-scss": "^2.6.0",
+    "rollup-plugin-vue": "^5.1.9",
     "sass": "^1.26.5",
     "sass-loader": "^8.0.2",
+    "vue": "2.6.11",
     "vue-template-compiler": "^2.6.11"
   }
 }

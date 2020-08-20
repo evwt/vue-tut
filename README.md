@@ -1,24 +1,26 @@
 # vue-tut
 
-## Project setup
-```
-npm install
+Easily build beautiful tutorials to go along with your documentation.
+
+```bash
+vue create my-tutorial-site
+npm i vue-tut
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+```vue
+<template>
+  <tutorial>
+    ...
+  </tutorial>
+</template>
 
-### Compiles and minifies for production
-```
-npm run build
-```
+<script>
+import { Tutorial } from 'vue-tut';
 
-### Lints and fixes files
+export default {
+  components: {
+    VueTut
+  }
+};
+</script>
 ```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

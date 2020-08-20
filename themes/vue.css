@@ -1,0 +1,52 @@
+:root {
+  --tut-color-accent: #42b983;
+  --tut-color-body: #304455;
+  --tut-color-headers: #273849;
+  --tut-color-gray-dark: #4f5959;
+}
+
+.vue-tut {
+  background-color: #fff;
+  color: var(--tut-color-body);
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+}
+.vue-tut a, .vue-tut a:visited {
+  color: var(--tut-color-accent);
+}
+.vue-tut h1, .vue-tut h2, .vue-tut h3, .vue-tut h4 {
+  font-weight: 600;
+}
+.vue-tut .sections > section > header > h1 {
+  font-weight: 600;
+}
+.vue-tut .sections > section > header > h2 {
+  font-weight: 600;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 17px;
+}
+.vue-tut h1, .vue-tut h2, .vue-tut h3, .vue-tut h4, .vue-tut h5, .vue-tut h6 {
+  color: var(--tut-color-headers);
+}
+.vue-tut p {
+  color: var(--tut-color-body);
+  line-height: 1.4;
+}
+.vue-tut .step {
+  background-color: #f8f8f8;
+}
+.vue-tut .step hr {
+  border-color: #ddd;
+}
+.vue-tut .prism-editor-wrapper .prism-editor__line-number.highlight-line {
+  border-left: 5px solid var(--tut-color-accent);
+  background: #0173fe38;
+}
+.vue-tut .prism-editor-wrapper .prism-editor__line-number.highlight-line:after {
+  background: #0173fe38;
+}
+.vue-tut .intersected .step {
+  border-left: 10px solid var(--tut-color-accent);
+}
+
+/*# sourceMappingURL=vue.css.map */
