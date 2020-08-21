@@ -13,7 +13,7 @@ import 'prismjs/components/prism-clike';
 import 'prismjs/components/prism-markup';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-css';
-// import 'prismjs/themes/prism-tomorrow.css';
+import 'prismjs/themes/prism-tomorrow.css';
 // import 'prism-themes/themes/prism-hopscotch.css';
 // import '@/style/editor-theme-vue.scss';
 // import '@/style/editor-theme-ghcolors.scss';

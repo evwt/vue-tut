@@ -3224,7 +3224,6 @@
 	}(Prism));
 
 	//
-	// import 'prismjs/themes/prism-tomorrow.css';
 	// import 'prism-themes/themes/prism-hopscotch.css';
 	// import '@/style/editor-theme-vue.scss';
 	// import '@/style/editor-theme-ghcolors.scss';
