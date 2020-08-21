@@ -81,6 +81,14 @@ html, body {
 
 <a href="https://czz5i.csb.app/" target="_blank"><img width="994" alt="Screen Shot 2020-08-20 at 6 00 39 PM" src="https://user-images.githubusercontent.com/611996/90835167-7b409280-e311-11ea-8e2d-5a685f46ad64.png"></a>
    
-Hello World - _Theme: Vue, Language: Vue SFC, Editor Theme: Tomorrow Night_
+Hello World - _Theme: Vue_
 
 [![Edit zealous-grass-czz5i](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/zealous-grass-czz5i?fontsize=14&hidenavigation=1&theme=light)
+
+<a href="https://g4si3.csb.app/" target="_blank"><img width="1083" alt="Screen Shot 2020-08-20 at 6 59 28 PM" src="https://user-images.githubusercontent.com/611996/90837317-4f281000-e317-11ea-9d7a-d2286ece835c.png"></a>
+   
+All Slots - _Theme: Azure_
+
+[![Edit zealous-grass-czz5i](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/determined-robinson-g4si3?fontsize=14&hidenavigation=1&theme=light)
+
+
