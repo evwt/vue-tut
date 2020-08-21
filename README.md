@@ -2,6 +2,8 @@
 
 Easily build beautiful tutorials with Vue.
 
+### **[Demo](https://g4si3.csb.app/)** 
+
 ## Install
 
 ```bash
