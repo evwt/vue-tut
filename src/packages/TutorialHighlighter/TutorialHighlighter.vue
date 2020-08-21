@@ -3,20 +3,20 @@
     v-model="text"
     class="tutorial-highlighter"
     :highlight="highlighter"
-    line-numbers
-    readonly />
+    line-numbers />
 </template>
 
 <script>
 import { PrismEditor } from 'vue-prism-editor';
-import 'vue-prism-editor/dist/prismeditor.min.css';
 import { highlight, languages } from 'prismjs/components/prism-core';
 import 'prismjs/components/prism-clike';
 import 'prismjs/components/prism-markup';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-css';
-import 'prismjs/themes/prism-tomorrow.css';
-
+// import 'prismjs/themes/prism-tomorrow.css';
+// import 'prism-themes/themes/prism-hopscotch.css';
+// import '@/style/editor-theme-vue.scss';
+// import '@/style/editor-theme-ghcolors.scss';
 // Highlight lines of text with line numbers or regexes.
 export default {
   components: {
@@ -34,16 +34,37 @@ export default {
   },
 
   mounted() {
-    for (const highlightLine of this.highlightLines) {
-      if (highlightLine instanceof RegExp) {
-        this.highlightLineRegex(highlightLine);
-      } else if (Number.isInteger(highlightLine)) {
-        this.highlightLineNumber(highlightLine);
-      }
-    }
+    this.shareBackground();
+    this.highlight();
   },
 
   methods: {
+    shareBackground() {
+      let editorPre = this.$el.querySelector('pre');
+
+      if (editorPre) {
+        editorPre.classList.add('language-');
+
+        let sharedBgEl = this.$el.closest('.prism-share-background');
+
+        if (sharedBgEl) {
+          let style = window.getComputedStyle(editorPre);
+          sharedBgEl.style.backgroundColor = style.backgroundColor;
+          sharedBgEl.style.color = style.color;
+        }
+      }
+    },
+
+    highlight() {
+      for (const highlightLine of this.highlightLines) {
+        if (highlightLine instanceof RegExp) {
+          this.highlightLineRegex(highlightLine);
+        } else if (Number.isInteger(highlightLine)) {
+          this.highlightLineNumber(highlightLine);
+        }
+      }
+    },
+
     highlightLineNumber(number) {
       let line = this.$el.querySelector(`.prism-editor__line-number:nth-child(${number + 1})`);
       if (!line) return;

@@ -28,6 +28,7 @@
     "core-js": "^3.6.5",
     "lodash": "^4.17.20",
     "portal-vue": "1.5.1",
+    "prism-themes": "^1.4.0",
     "prismjs": "^1.21.0",
     "rollup-plugin-alias": "^2.2.0",
     "vue-intersect": "^1.1.6",

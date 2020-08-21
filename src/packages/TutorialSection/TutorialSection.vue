@@ -26,7 +26,7 @@
         <slot name="step" />
       </div>
 
-      <div class="step-assets">
+      <div class="step-assets prism-share-background">
         <transition-group name="fade" tag="div" class="step-assets-inner">
           <tutorial-aside :key="activeStep" :active-step="activeStep" :steps="$slots.step" class="asset-aside-wrapper" />
         </transition-group>

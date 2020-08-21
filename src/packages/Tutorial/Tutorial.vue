@@ -29,6 +29,7 @@
 import WebFontLoader from 'webfontloader';
 import '../../style/reset.scss';
 import '../../style/utilities.scss';
+import '../../style/prism-editor.scss';
 import '../../style/vue-tut.scss';
 import '../../style/vue-tut-section.scss';
 import '../../style/vue-tut-step.scss';

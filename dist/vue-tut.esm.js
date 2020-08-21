@@ -855,7 +855,7 @@ var __vue_render__$1 = function() {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "step-assets" },
+        { staticClass: "step-assets prism-share-background" },
         [
           _c(
             "transition-group",
@@ -3216,7 +3216,10 @@ Prism.languages.js = Prism.languages.javascript;
 }(Prism));
 
 //
-
+// import 'prismjs/themes/prism-tomorrow.css';
+// import 'prism-themes/themes/prism-hopscotch.css';
+// import '@/style/editor-theme-vue.scss';
+// import '@/style/editor-theme-ghcolors.scss';
 // Highlight lines of text with line numbers or regexes.
 var script$4 = {
   components: {
@@ -3234,16 +3237,37 @@ var script$4 = {
   },
 
   mounted() {
-    for (const highlightLine of this.highlightLines) {
-      if (highlightLine instanceof RegExp) {
-        this.highlightLineRegex(highlightLine);
-      } else if (Number.isInteger(highlightLine)) {
-        this.highlightLineNumber(highlightLine);
-      }
-    }
+    this.shareBackground();
+    this.highlight();
   },
 
   methods: {
+    shareBackground() {
+      let editorPre = this.$el.querySelector('pre');
+
+      if (editorPre) {
+        editorPre.classList.add('language-');
+
+        let sharedBgEl = this.$el.closest('.prism-share-background');
+
+        if (sharedBgEl) {
+          let style = window.getComputedStyle(editorPre);
+          sharedBgEl.style.backgroundColor = style.backgroundColor;
+          sharedBgEl.style.color = style.color;
+        }
+      }
+    },
+
+    highlight() {
+      for (const highlightLine of this.highlightLines) {
+        if (highlightLine instanceof RegExp) {
+          this.highlightLineRegex(highlightLine);
+        } else if (Number.isInteger(highlightLine)) {
+          this.highlightLineNumber(highlightLine);
+        }
+      }
+    },
+
     highlightLineNumber(number) {
       let line = this.$el.querySelector(`.prism-editor__line-number:nth-child(${number + 1})`);
       if (!line) return;
@@ -3280,7 +3304,7 @@ var __vue_render__$3 = function() {
   var _c = _vm._self._c || _h;
   return _c("prism-editor", {
     staticClass: "tutorial-highlighter",
-    attrs: { highlight: _vm.highlighter, "line-numbers": "", readonly: "" },
+    attrs: { highlight: _vm.highlighter, "line-numbers": "" },
     model: {
       value: _vm.text,
       callback: function($$v) {
