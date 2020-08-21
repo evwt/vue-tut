@@ -17,6 +17,7 @@ import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-css';
 import 'prismjs/themes/prism-tomorrow.css';
 
+// Highlight lines of text with line numbers or regexes.
 export default {
   components: {
     PrismEditor

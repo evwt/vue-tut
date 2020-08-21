@@ -2,9 +2,8 @@
 
 Easily build beautiful tutorials with Vue.
 
-### **[Docs](https://evwt.github.io/vue-tut/)** 
-
-### **[Demo](https://g4si3.csb.app/)** 
+* **📒 [Docs](https://evwt.github.io/vue-tut/)**
+* **🖥 [Demo](https://g4si3.csb.app/)**
 
 ## Install
 

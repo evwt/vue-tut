@@ -46,7 +46,9 @@
 
 	//
 
-	// <img width="915" alt="Screen Shot 2020-08-20 at 7 26 00 PM" src="https://user-images.githubusercontent.com/611996/90838647-03776580-e31b-11ea-8e27-00bdcb700dbe.png">
+	// <img width="915" alt="90838647-03776580-e31b-11ea-8e27-00bdcb700dbe" src="https://user-images.githubusercontent.com/611996/90840195-f65c7580-e31e-11ea-893c-9f64ad753814.png">
+	//
+	// The header slots are all optional. No tutorial header will displayed if you omit all of them.
 	var script = {
 	  name: 'Tutorial',
 
@@ -772,7 +774,8 @@
 
 	//
 
-	// <img width="915" alt="Screen Shot 2020-08-20 at 7 26 00 PM" src="https://user-images.githubusercontent.com/611996/90838647-03776580-e31b-11ea-8e27-00bdcb700dbe.png">
+	// <img width="915" alt="90838647-03776580-e31b-11ea-8e27-00bdcb700dbe-1" src="https://user-images.githubusercontent.com/611996/90840201-f78da280-e31e-11ea-99f4-4f2866a65d3f.png">
+
 	var script$2 = {
 	  name: 'TutorialSection',
 
@@ -1006,7 +1009,8 @@
 
 	//
 
-	// <img width="915" alt="Screen Shot 2020-08-20 at 7 26 00 PM" src="https://user-images.githubusercontent.com/611996/90838647-03776580-e31b-11ea-8e27-00bdcb700dbe.png">
+	// <img width="915" alt="90838647-03776580-e31b-11ea-8e27-00bdcb700dbe-2" src="https://user-images.githubusercontent.com/611996/90840198-f6f50c00-e31e-11ea-9722-99c625e2f195.png">
+
 	var script$3 = {
 	  name: 'TutorialStep',
 
@@ -3221,6 +3225,7 @@
 
 	//
 
+	// Highlight lines of text with line numbers or regexes.
 	var script$4 = {
 	  components: {
 	    PrismEditor

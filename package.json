@@ -16,6 +16,7 @@
   "scripts": {
     "docs:vuese": "vuese gen",
     "docs:build": "npm run docs:vuese && cp README.md docs/",
+    "docs:watch": "nodemon --ignore docs/ --ignore vuese/ --exec npm run docs:build -e scss,js,vue,md",
     "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
     "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-tut.umd.js",
     "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-tut.esm.js",

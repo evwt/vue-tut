@@ -2,6 +2,9 @@
 
 Easily build beautiful tutorials with Vue.
 
+* **📒 [Docs](https://evwt.github.io/vue-tut/)**
+* **🖥 [Demo](https://g4si3.csb.app/)**
+
 ## Install
 
 ```bash
@@ -14,7 +17,7 @@ npm i vue-tut
 import VueTut from 'vue-tut';
 import 'vue-tut/dist/vue-tut.min.css';
 // Try one of these themes, or neither
-import 'vue-tut/dist/themes/vue.css';
+// import 'vue-tut/dist/themes/vue.css';
 // import 'vue-tut/dist/themes/azure.css';
 
 Vue.use(VueTut);
