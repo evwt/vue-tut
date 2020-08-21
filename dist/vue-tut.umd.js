@@ -107,7 +107,6 @@
 	    async setLangs() {
 	      try {
 	        for (const lang of this.codeLangs) {
-	          console.log(lang);
 	          await import('prismjs/components/prism-' + lang + '.js');
 	        }
 	      } catch (error) {
@@ -3550,9 +3549,7 @@
 	        return prismCore.highlight(text, prismCore.languages[lang]);
 	      }
 
-	      console.log(text, prismCore.languages[lang]);
-
-	      return 'no text or langs';
+	      return '';
 	    },
 
 	    // This is horrible
