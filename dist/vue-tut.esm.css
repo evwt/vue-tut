@@ -1,32 +1,3 @@
-.vue-tut {
-  font-family: sans-serif;
-  min-height: 100%; }
-  .vue-tut h1, .vue-tut h2, .vue-tut h3, .vue-tut h4, .vue-tut h5, .vue-tut h6, .vue-tut p {
-    margin: 0;
-    padding: 0;
-    line-height: 1.15; }
-  .vue-tut hr {
-    height: 0;
-    border: 0;
-    border-bottom: 1px solid #e8e8e8; }
-  .vue-tut * {
-    box-sizing: border-box; }
-  .vue-tut *:before,
-  .vue-tut *:after {
-    box-sizing: border-box; }
-
-.vue-tut .tutorial-section {
-  margin: 50px; }
-  .vue-tut .tutorial-section header p {
-    font-size: 16px;
-    line-height: 1.4; }
-  .vue-tut .tutorial-section header h1 {
-    font-size: 20px; }
-  .vue-tut .tutorial-section header h2 {
-    font-size: 26px; }
-  .vue-tut .tutorial-section:last-child {
-    margin-bottom: 0; }
-
 .vue-tut .h-100 {
   height: 100%; }
 
@@ -316,57 +287,21 @@
   margin: 25px; }
 
 .vue-tut {
-  background-color: #fff;
-  color: #333;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  text-align: left; }
-  .vue-tut .tutorial-header {
-    padding: 50px; }
-    .vue-tut .tutorial-header h1 {
-      font-size: 22px; }
-    .vue-tut .tutorial-header h2 {
-      font-size: 32px; }
-    .vue-tut .tutorial-header p {
-      line-height: 1.4; }
-  .vue-tut .step-contents .step-aside {
-    display: none; }
-
-.vue-tut .tutorial-highlighter {
-  background: #2d2d2d;
-  color: #ccc;
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-  font-size: 14px;
-  line-height: 1.5;
-  padding: 10px 5px 5px 0; }
-
-.vue-tut .prism-editor-wrapper .prism-editor__container {
-  overflow-x: auto; }
-
-.vue-tut .prism-editor__textarea:focus {
-  outline: none; }
-
-.vue-tut .prism-editor__editor {
-  white-space: pre; }
-
-.vue-tut .prism-editor-wrapper .prism-editor__line-numbers {
-  margin-right: 20px; }
-
-.vue-tut .prism-editor-wrapper .prism-editor__line-number {
-  border-left: 5px solid transparent;
-  padding-left: 10px; }
-
-.vue-tut .prism-editor-wrapper .prism-editor__line-number.highlight-line {
-  border-left: 5px solid gray;
-  background: rgba(128, 128, 128, 0.384); }
-
-.vue-tut .prism-editor-wrapper .prism-editor__line-number.highlight-line:after {
-  content: '';
-  height: 21px;
-  background: rgba(128, 128, 128, 0.384);
-  position: absolute;
-  max-width: 920px;
-  width: calc(50vw + 8.33333%) !important; }
+  font-family: sans-serif;
+  min-height: 100%; }
+  .vue-tut h1, .vue-tut h2, .vue-tut h3, .vue-tut h4, .vue-tut h5, .vue-tut h6, .vue-tut p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.15; }
+  .vue-tut hr {
+    height: 0;
+    border: 0;
+    border-bottom: 1px solid #e8e8e8; }
+  .vue-tut * {
+    box-sizing: border-box; }
+  .vue-tut *:before,
+  .vue-tut *:after {
+    box-sizing: border-box; }
 
 .vue-tut .steps {
   padding-top: 50px; }
@@ -454,6 +389,59 @@
 .vue-tut .fade-enter, .vue-tut .fade-leave-to {
   opacity: 0; }
 
+.vue-tut {
+  background-color: #fff;
+  color: #333;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-align: left; }
+  .vue-tut .tutorial-header {
+    padding: 50px; }
+    .vue-tut .tutorial-header h1 {
+      font-size: 22px; }
+    .vue-tut .tutorial-header h2 {
+      font-size: 32px; }
+    .vue-tut .tutorial-header p {
+      line-height: 1.4; }
+  .vue-tut .step-contents .step-aside {
+    display: none; }
+
+.vue-tut .tutorial-highlighter {
+  background: #2d2d2d;
+  color: #ccc;
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 10px 5px 5px 0; }
+
+.vue-tut .prism-editor-wrapper .prism-editor__container {
+  overflow-x: auto; }
+
+.vue-tut .prism-editor__textarea:focus {
+  outline: none; }
+
+.vue-tut .prism-editor__editor {
+  white-space: pre; }
+
+.vue-tut .prism-editor-wrapper .prism-editor__line-numbers {
+  margin-right: 20px; }
+
+.vue-tut .prism-editor-wrapper .prism-editor__line-number {
+  border-left: 5px solid transparent;
+  padding-left: 10px; }
+
+.vue-tut .prism-editor-wrapper .prism-editor__line-number.highlight-line {
+  border-left: 5px solid gray;
+  background: rgba(128, 128, 128, 0.384); }
+
+.vue-tut .prism-editor-wrapper .prism-editor__line-number.highlight-line:after {
+  content: '';
+  height: 21px;
+  background: rgba(128, 128, 128, 0.384);
+  position: absolute;
+  max-width: 920px;
+  width: calc(50vw + 8.33333%) !important; }
+
 @media all and (max-width: 980px) {
   main.vue-tut .tutorial-header {
     padding: 15px;
@@ -486,6 +474,18 @@
     display: none; }
   main.vue-tut .step-wrapper:first-child .step {
     margin-top: 40px; } }
+
+.vue-tut .tutorial-section {
+  margin: 50px; }
+  .vue-tut .tutorial-section header p {
+    font-size: 16px;
+    line-height: 1.4; }
+  .vue-tut .tutorial-section header h1 {
+    font-size: 20px; }
+  .vue-tut .tutorial-section header h2 {
+    font-size: 26px; }
+  .vue-tut .tutorial-section:last-child {
+    margin-bottom: 0; }
 
 .prism-editor-wrapper{width:100%;height:100%;display:flex;align-items:flex-start;overflow:auto;-o-tab-size:1.5em;tab-size:1.5em;-moz-tab-size:1.5em}@media (-ms-high-contrast:active),(-ms-high-contrast:none){.prism-editor-wrapper .prism-editor__textarea{color:transparent!important}.prism-editor-wrapper .prism-editor__textarea::-moz-selection{background-color:#accef7!important;color:transparent!important}.prism-editor-wrapper .prism-editor__textarea::selection{background-color:#accef7!important;color:transparent!important}}.prism-editor-wrapper .prism-editor__container{position:relative;text-align:left;box-sizing:border-box;padding:0;overflow:hidden;width:100%}.prism-editor-wrapper .prism-editor__line-numbers{height:100%;overflow:hidden;flex-shrink:0;padding-top:4px;margin-top:0;margin-right:10px}.prism-editor-wrapper .prism-editor__line-number{text-align:right;white-space:nowrap}.prism-editor-wrapper .prism-editor__textarea{position:absolute;top:0;left:0;height:100%;width:100%;resize:none;color:inherit;overflow:hidden;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;-webkit-text-fill-color:transparent}.prism-editor-wrapper .prism-editor__editor,.prism-editor-wrapper .prism-editor__textarea{margin:0;border:0;background:none;box-sizing:inherit;display:inherit;font-family:inherit;font-size:inherit;font-style:inherit;font-variant-ligatures:inherit;font-weight:inherit;letter-spacing:inherit;line-height:inherit;-moz-tab-size:inherit;-o-tab-size:inherit;tab-size:inherit;text-indent:inherit;text-rendering:inherit;text-transform:inherit;white-space:pre-wrap;word-wrap:keep-all;overflow-wrap:break-word;padding:0}.prism-editor-wrapper .prism-editor__textarea--empty{-webkit-text-fill-color:inherit!important}.prism-editor-wrapper .prism-editor__editor{position:relative;pointer-events:none}
 /**

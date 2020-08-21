@@ -14,7 +14,7 @@ npm i vue-tut
 import VueTut from 'vue-tut';
 import 'vue-tut/dist/vue-tut.min.css';
 // Try one of these themes, or neither
-// import 'vue-tut/dist/themes/vue.css';
+import 'vue-tut/dist/themes/vue.css';
 // import 'vue-tut/dist/themes/azure.css';
 
 Vue.use(VueTut);
