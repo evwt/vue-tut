@@ -120,9 +120,7 @@ export default {
         return highlight(text, languages[lang]);
       }
 
-      console.log(text, languages[lang]);
-
-      return 'no text or langs';
+      return '';
     },
 
     // This is horrible

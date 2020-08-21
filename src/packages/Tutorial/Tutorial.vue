@@ -103,7 +103,6 @@ export default {
     async setLangs() {
       try {
         for (const lang of this.codeLangs) {
-          console.log(lang)
           await import('prismjs/components/prism-' + lang + '.js');
         }
       } catch (error) {
