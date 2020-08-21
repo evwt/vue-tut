@@ -24,6 +24,11 @@
           <slot name="aside" />
         </div>
       </div>
+
+      <div class="step-after">
+        <!-- Content to display after and outsize the step box -->
+        <slot name="after" />
+      </div>
     </div>
   </intersect>
 </template>

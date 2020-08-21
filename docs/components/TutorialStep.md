@@ -10,6 +10,7 @@
 |name|The name of the step|"Step #"|
 |default|The content of the step box|-|
 |aside|The content to put aside the step box (or below on mobile)|-|
+|after|Content to display after and outsize the step box|-|
 
 <!-- @vuese:TutorialStep:slots:end -->
 

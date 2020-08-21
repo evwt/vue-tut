@@ -1,11 +1,11 @@
-.vue-tut > header {
+.vue-tut .tutorial-header, .vue-tut .tutorial-footer {
   background-color: #000;
   color: #fff;
 }
-.vue-tut > header > p {
+.vue-tut .tutorial-header p, .vue-tut .tutorial-footer p {
   font-size: 17px;
 }
-.vue-tut > header > h1, .vue-tut > header > h2 {
+.vue-tut .tutorial-header h1, .vue-tut .tutorial-header h2, .vue-tut .tutorial-footer h1, .vue-tut .tutorial-footer h2 {
   letter-spacing: 0.6px;
   font-weight: 400;
 }
@@ -30,6 +30,13 @@
 }
 .vue-tut .step-intersected .step {
   border-left: 10px solid #0173fe;
+}
+.vue-tut .step-after {
+  background: #e1daf1;
+  border-radius: 10px;
+  padding: 20px 15px;
+  font-size: 15px;
+  line-height: 1.3;
 }
 
 /*# sourceMappingURL=azure.css.map */

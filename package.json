@@ -23,7 +23,8 @@
   "keywords": [
     "vue",
     "tutorial",
-    "documentation"
+    "documentation",
+    "builder"
   ],
   "scripts": {
     "docs:vuese": "vuese gen",
@@ -39,6 +40,7 @@
   "dependencies": {
     "core-js": "^3.6.5",
     "lodash": "^4.17.20",
+    "p-wait-for": "^3.1.0",
     "portal-vue": "1.5.1",
     "prism-themes": "^1.4.0",
     "prismjs": "^1.21.0",

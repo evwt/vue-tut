@@ -1,13 +1,13 @@
 .vue-tut {
-  > header {
+  .tutorial-header, .tutorial-footer {
     background-color: #000;
     color: #fff;
 
-    > p {
+    p {
       font-size: 17px;
     }
 
-    > h1, > h2 {
+    h1, h2 {
       letter-spacing: 0.6px;
       font-weight: 400;
     }
@@ -40,5 +40,13 @@
 
   .step-intersected .step {
     border-left: 10px solid #0173fe;
+  }
+
+  .step-after {
+    background: #e1daf1;
+    border-radius: 10px;
+    padding: 20px 15px;
+    font-size: 15px;
+    line-height: 1.3;
   }
 }

@@ -74,9 +74,14 @@ export default {
       let firstIntersected = this.$el.querySelector('.step-contents .step-intersected');
 
       if (!firstIntersected) {
-        // Select last if we are scrolled past all of them
-        let size = [...this.$el.querySelectorAll('.step-contents .step-wrapper')].length || 1;
-        this.activeStep = size;
+        if (window.scrollY > this.$el.offsetTop) {
+          // Select last if we are scrolled past all of them
+          let size = [...this.$el.querySelectorAll('.step-contents .step-wrapper')].length || 1;
+          this.activeStep = size;
+        } else {
+          this.activeStep = 1;
+        }
+
         return;
       }
 

@@ -5,15 +5,17 @@
   -webkit-font-smoothing: antialiased;
   text-align: left;
 
-  .tutorial-header {
+  .tutorial-header, .tutorial-footer {
     padding: 50px;
 
     h1 {
       font-size: 22px;
+      margin-bottom: 10px;
     }
 
     h2 {
       font-size: 32px;
+      margin-bottom: 25px;
     }
 
     p {
@@ -21,8 +23,20 @@
     }
   }
 
+  .tutorial-footer {
+    min-height: 100vh;
+  }
+
+  .tutorial-footer:empty {
+    display: none;
+  }
+
   // On desktop, we hide the asides in the contents
   .step-contents .step-aside {
+    display: none;
+  }
+
+  .step-assets .step-after {
     display: none;
   }
 }

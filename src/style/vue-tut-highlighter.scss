@@ -31,11 +31,15 @@
     user-select: none;
     cursor: default;
     margin-right: 20px;
+    min-width: 42px;
+    background: transparent !important;
+    overflow: visible;
   }
 
   .prism-editor__line-number {
     border-left: 5px solid transparent;
     padding-left: 10px;
+    position: relative;
   }
 
   .prism-editor__line-number.highlight-line {
@@ -51,7 +55,7 @@
     position: absolute;
     z-index: 1;
     max-width: 920px;
-    width: calc(50vw + 8.33333%) !important;
+    width: calc(50vw + 58px) !important;
   }
 
   textarea {

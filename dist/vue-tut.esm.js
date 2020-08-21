@@ -61,6 +61,16 @@ var script = {
     codeTheme: {
       type: String,
       default: 'vue'
+    },
+
+    // Code languages to load for the highlighter.
+    // <br><br>
+    // Select from this list: https://github.com/PrismJS/prism/tree/master/components
+    // <br><br>
+
+    codeLangs: {
+      type: Array,
+      default: ['clike', 'markup', 'javascript', 'css']
     }
   },
 
@@ -71,6 +81,8 @@ var script = {
   },
 
   created() {
+    this.setLangs();
+
     webfontloader.load({
       google: { families: ['Source Sans Pro:300,400,600:latin'] },
       active() { this.loaded = true; }
@@ -84,6 +96,17 @@ var script = {
   },
 
   methods: {
+    async setLangs() {
+      try {
+        for (const lang of this.codeLangs) {
+          console.log(lang);
+          await import('prismjs/components/prism-' + lang + '.js');
+        }
+      } catch (error) {
+        console.log('[VueTut] Error loading one or more of your code-langs, is the name spelled correctly?');
+      }
+    },
+
     async setTheme() {
       if (this.codeTheme === 'vue') {
         Promise.resolve().then(function () { return vue; });
@@ -234,7 +257,9 @@ var __vue_render__ = function() {
             )
           : _vm._e(),
         _vm._v(" "),
-        _c("div", { staticClass: "sections" }, [_vm._t("sections")], 2)
+        _c("div", { staticClass: "sections" }, [_vm._t("sections")], 2),
+        _vm._v(" "),
+        _c("footer", { staticClass: "tutorial-footer" }, [_vm._t("footer")], 2)
       ])
     : _vm._e()
 };
@@ -868,9 +893,14 @@ var script$2 = {
       let firstIntersected = this.$el.querySelector('.step-contents .step-intersected');
 
       if (!firstIntersected) {
-        // Select last if we are scrolled past all of them
-        let size = [...this.$el.querySelectorAll('.step-contents .step-wrapper')].length || 1;
-        this.activeStep = size;
+        if (window.scrollY > this.$el.offsetTop) {
+          // Select last if we are scrolled past all of them
+          let size = [...this.$el.querySelectorAll('.step-contents .step-wrapper')].length || 1;
+          this.activeStep = size;
+        } else {
+          this.activeStep = 1;
+        }
+
         return;
       }
 
@@ -1150,7 +1180,9 @@ var __vue_render__$2 = function() {
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "step-aside" }, [_vm._t("aside")], 2)
-        ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "step-after" }, [_vm._t("after")], 2)
       ])
     ]
   )
@@ -1206,6 +1238,128 @@ if (typeof window !== 'undefined') {
 if (GlobalVue$3) {
   GlobalVue$3.use(plugin$3);
 }
+
+var pFinally = (promise, onFinally) => {
+	onFinally = onFinally || (() => {});
+
+	return promise.then(
+		val => new Promise(resolve => {
+			resolve(onFinally());
+		}).then(() => val),
+		err => new Promise(resolve => {
+			resolve(onFinally());
+		}).then(() => {
+			throw err;
+		})
+	);
+};
+
+class TimeoutError extends Error {
+	constructor(message) {
+		super(message);
+		this.name = 'TimeoutError';
+	}
+}
+
+const pTimeout = (promise, milliseconds, fallback) => new Promise((resolve, reject) => {
+	if (typeof milliseconds !== 'number' || milliseconds < 0) {
+		throw new TypeError('Expected `milliseconds` to be a positive number');
+	}
+
+	if (milliseconds === Infinity) {
+		resolve(promise);
+		return;
+	}
+
+	const timer = setTimeout(() => {
+		if (typeof fallback === 'function') {
+			try {
+				resolve(fallback());
+			} catch (error) {
+				reject(error);
+			}
+
+			return;
+		}
+
+		const message = typeof fallback === 'string' ? fallback : `Promise timed out after ${milliseconds} milliseconds`;
+		const timeoutError = fallback instanceof Error ? fallback : new TimeoutError(message);
+
+		if (typeof promise.cancel === 'function') {
+			promise.cancel();
+		}
+
+		reject(timeoutError);
+	}, milliseconds);
+
+	// TODO: Use native `finally` keyword when targeting Node.js 10
+	pFinally(
+		// eslint-disable-next-line promise/prefer-await-to-then
+		promise.then(resolve, reject),
+		() => {
+			clearTimeout(timer);
+		}
+	);
+});
+
+var pTimeout_1 = pTimeout;
+// TODO: Remove this for the next major release
+var _default = pTimeout;
+
+var TimeoutError_1 = TimeoutError;
+pTimeout_1.default = _default;
+pTimeout_1.TimeoutError = TimeoutError_1;
+
+const pWaitFor = async (condition, options) => {
+	options = {
+		interval: 20,
+		timeout: Infinity,
+		...options
+	};
+
+	let retryTimeout;
+
+	const promise = new Promise((resolve, reject) => {
+		const check = async () => {
+			try {
+				const value = await condition();
+
+				if (typeof value !== 'boolean') {
+					throw new TypeError('Expected condition to return a boolean');
+				}
+
+				if (value === true) {
+					resolve();
+				} else {
+					retryTimeout = setTimeout(check, options.interval);
+				}
+			} catch (error) {
+				reject(error);
+			}
+		};
+
+		check();
+	});
+
+	if (options.timeout !== Infinity) {
+		try {
+			return await pTimeout_1(promise, options.timeout);
+		} catch (error) {
+			if (retryTimeout) {
+				clearTimeout(retryTimeout);
+			}
+
+			throw error;
+		}
+	}
+
+	return promise;
+};
+
+var pWaitFor_1 = pWaitFor;
+// TODO: Remove this for the next major release
+var _default$1 = pWaitFor;
+pWaitFor_1.default = _default$1;
 
 function _extends() {
   _extends = Object.assign || function (target) {
@@ -3291,18 +3445,31 @@ var script$4 = {
   },
 
   props: {
-    // Array of integers and/or regexes to highlight
-    highlightLines: Array,
+    // Array of integers, strings (`'start:end'`) and/or regexes to highlight
+    highlightLines: {
+      type: Array,
+      default: () => []
+    },
     // The text to highlight
     text: {
       type: String,
       required: true
+    },
+    // Language to use for syntax highlighting
+    lang: {
+      type: String,
+      default: 'vue'
     }
   },
 
+  data() {
+    return {
+      show: false
+    };
+  },
+
   mounted() {
-    this.shareBackground();
-    this.highlight();
+    this.delayedMount();
   },
 
   methods: {
@@ -3312,7 +3479,9 @@ var script$4 = {
       if (editorPre) {
         editorPre.classList.add('language-');
 
-        let sharedBgEls = [...document.querySelectorAll('.prism-share-background')];
+        let sharedBgEls = [
+          ...document.querySelectorAll('.prism-share-background')
+        ];
 
         if (sharedBgEls.length) {
           for (const sharedBgEl of sharedBgEls) {
@@ -3326,11 +3495,25 @@ var script$4 = {
 
     highlight() {
       for (const highlightLine of this.highlightLines) {
-        if (highlightLine instanceof RegExp) {
+        if (typeof highlightLine === 'string') {
+          try {
+            this.highlightLineRange(...highlightLine.split(':').map(m => parseInt(m)));
+          } catch (error) {
+            console.log('[VueTut] That highlight range appears invalid. It should be in the format start:end');
+          }
+        } else if (highlightLine instanceof RegExp) {
           this.highlightLineRegex(highlightLine);
         } else if (Number.isInteger(highlightLine)) {
           this.highlightLineNumber(highlightLine);
         }
+      }
+    },
+
+    highlightLineRange(start, end) {
+      for (let idx = start; idx <= end; idx++) {
+        let line = this.$el.querySelector(`.prism-editor__line-number:nth-child(${idx + 1})`);
+        if (!line) return;
+        line.classList.add('highlight-line');
       }
     },
 
@@ -3351,11 +3534,45 @@ var script$4 = {
     },
 
     highlighter(text) {
-      if (text && prismCore.languages.html) {
-        return prismCore.highlight(text, prismCore.languages.html);
+      let lang = this.lang;
+
+      if (lang === 'vue') lang = 'markup';
+
+      if (text && prismCore.languages[lang]) {
+        return prismCore.highlight(text, prismCore.languages[lang]);
       }
 
-      return '';
+      console.log(text, prismCore.languages[lang]);
+
+      return 'no text or langs';
+    },
+
+    // This is horrible
+    async delayedMount() {
+      let lang = this.lang;
+
+      if (lang === 'vue') lang = 'markup';
+
+      await pWaitFor_1(() => !!prismCore.languages[lang]);
+      this.show = true;
+      await this.$nextTick();
+
+      await pWaitFor_1(() => !!this.$el.querySelector);
+      await pWaitFor_1(() => !!this.$el.querySelector('textarea'));
+      await this.$nextTick();
+
+      this.shareBackground();
+      this.highlight();
+
+      setTimeout(() => {
+        this.shareBackground();
+        this.highlight();
+      }, 10);
+
+      setTimeout(() => {
+        this.shareBackground();
+        this.highlight();
+      }, 100);
     }
   }
 };
@@ -3368,17 +3585,19 @@ var __vue_render__$3 = function() {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
-  return _c("prism-editor", {
-    staticClass: "tutorial-highlighter prism-share-background",
-    attrs: { highlight: _vm.highlighter, "line-numbers": "" },
-    model: {
-      value: _vm.text,
-      callback: function($$v) {
-        _vm.text = $$v;
-      },
-      expression: "text"
-    }
-  })
+  return _vm.show
+    ? _c("prism-editor", {
+        staticClass: "tutorial-highlighter prism-share-background",
+        attrs: { highlight: _vm.highlighter, "line-numbers": "" },
+        model: {
+          value: _vm.text,
+          callback: function($$v) {
+            _vm.text = $$v;
+          },
+          expression: "text"
+        }
+      })
+    : _vm._e()
 };
 var __vue_staticRenderFns__$3 = [];
 __vue_render__$3._withStripped = true;

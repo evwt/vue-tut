@@ -22,6 +22,11 @@
       <!-- Should be a series of tutorial-section components -->
       <slot name="sections" />
     </div>
+
+    <footer class="tutorial-footer">
+      <!-- Content to put below the tutorial -->
+      <slot name="footer" />
+    </footer>
   </main>
 </template>
 
@@ -60,6 +65,16 @@ export default {
     codeTheme: {
       type: String,
       default: 'vue'
+    },
+
+    // Code languages to load for the highlighter.
+    // <br><br>
+    // Select from this list: https://github.com/PrismJS/prism/tree/master/components
+    // <br><br>
+
+    codeLangs: {
+      type: Array,
+      default: ['clike', 'markup', 'javascript', 'css']
     }
   },
 
@@ -70,6 +85,8 @@ export default {
   },
 
   created() {
+    this.setLangs();
+
     WebFontLoader.load({
       google: { families: ['Source Sans Pro:300,400,600:latin'] },
       active() { this.loaded = true; }
@@ -83,6 +100,17 @@ export default {
   },
 
   methods: {
+    async setLangs() {
+      try {
+        for (const lang of this.codeLangs) {
+          console.log(lang)
+          await import('prismjs/components/prism-' + lang + '.js');
+        }
+      } catch (error) {
+        console.log('[VueTut] Error loading one or more of your code-langs, is the name spelled correctly?');
+      }
+    },
+
     async setTheme() {
       if (this.codeTheme === 'vue') {
         import('@/style/editor-theme/vue.css');

@@ -1,5 +1,6 @@
 <template>
   <prism-editor
+    v-if="show"
     v-model="text"
     class="tutorial-highlighter prism-share-background"
     :highlight="highlighter"
@@ -7,6 +8,7 @@
 </template>
 
 <script>
+import pWaitFor from 'p-wait-for';
 import { PrismEditor } from 'vue-prism-editor';
 import { highlight, languages } from 'prismjs/components/prism-core';
 import 'prismjs/components/prism-clike';
@@ -21,18 +23,31 @@ export default {
   },
 
   props: {
-    // Array of integers and/or regexes to highlight
-    highlightLines: Array,
+    // Array of integers, strings (`'start:end'`) and/or regexes to highlight
+    highlightLines: {
+      type: Array,
+      default: () => []
+    },
     // The text to highlight
     text: {
       type: String,
       required: true
+    },
+    // Language to use for syntax highlighting
+    lang: {
+      type: String,
+      default: 'vue'
     }
   },
 
+  data() {
+    return {
+      show: false
+    };
+  },
+
   mounted() {
-    this.shareBackground();
-    this.highlight();
+    this.delayedMount();
   },
 
   methods: {
@@ -42,7 +57,9 @@ export default {
       if (editorPre) {
         editorPre.classList.add('language-');
 
-        let sharedBgEls = [...document.querySelectorAll('.prism-share-background')];
+        let sharedBgEls = [
+          ...document.querySelectorAll('.prism-share-background')
+        ];
 
         if (sharedBgEls.length) {
           for (const sharedBgEl of sharedBgEls) {
@@ -56,11 +73,25 @@ export default {
 
     highlight() {
       for (const highlightLine of this.highlightLines) {
-        if (highlightLine instanceof RegExp) {
+        if (typeof highlightLine === 'string') {
+          try {
+            this.highlightLineRange(...highlightLine.split(':').map(m => parseInt(m)));
+          } catch (error) {
+            console.log('[VueTut] That highlight range appears invalid. It should be in the format start:end');
+          }
+        } else if (highlightLine instanceof RegExp) {
           this.highlightLineRegex(highlightLine);
         } else if (Number.isInteger(highlightLine)) {
           this.highlightLineNumber(highlightLine);
         }
+      }
+    },
+
+    highlightLineRange(start, end) {
+      for (let idx = start; idx <= end; idx++) {
+        let line = this.$el.querySelector(`.prism-editor__line-number:nth-child(${idx + 1})`);
+        if (!line) return;
+        line.classList.add('highlight-line');
       }
     },
 
@@ -81,11 +112,45 @@ export default {
     },
 
     highlighter(text) {
-      if (text && languages.html) {
-        return highlight(text, languages.html);
+      let lang = this.lang;
+
+      if (lang === 'vue') lang = 'markup';
+
+      if (text && languages[lang]) {
+        return highlight(text, languages[lang]);
       }
 
-      return '';
+      console.log(text, languages[lang]);
+
+      return 'no text or langs';
+    },
+
+    // This is horrible
+    async delayedMount() {
+      let lang = this.lang;
+
+      if (lang === 'vue') lang = 'markup';
+
+      await pWaitFor(() => !!languages[lang]);
+      this.show = true;
+      await this.$nextTick();
+
+      await pWaitFor(() => !!this.$el.querySelector);
+      await pWaitFor(() => !!this.$el.querySelector('textarea'));
+      await this.$nextTick();
+
+      this.shareBackground();
+      this.highlight();
+
+      setTimeout(() => {
+        this.shareBackground();
+        this.highlight();
+      }, 10);
+
+      setTimeout(() => {
+        this.shareBackground();
+        this.highlight();
+      }, 100);
     }
   }
 };

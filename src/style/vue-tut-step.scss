@@ -15,6 +15,10 @@
     padding-bottom: 140px;
   }
 
+  .step-assets .step-wrapper {
+    padding-bottom: 0;
+  }
+
   .step {
     border-left: 10px solid transparent;
     background-color: #f3f1f1;
@@ -92,6 +96,14 @@
         }
       }
     }
+  }
+
+  .step-after {
+    margin-top: 40px;
+  }
+
+  .step-after:empty {
+    display: none;
   }
 
   .step-assets-inner {
