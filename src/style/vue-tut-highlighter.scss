@@ -19,6 +19,14 @@
     white-space: pre;
   }
 
+  .prism-editor-wrapper {
+    font-size: 14px !important;
+
+    * {
+      font-size: 14px !important;
+    }
+  }
+
   .prism-editor__line-numbers {
     user-select: none;
     cursor: default;
