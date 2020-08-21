@@ -1,4 +1,12 @@
 main.vue-tut {
+  @media all and (max-device-width: 980px) {
+    .prism-editor-wrapper {
+      .token {
+        font-size: 0.5rem !important;
+      }
+    }
+  }
+
   @media all and (max-width: 980px) {
     .tutorial-header {
       padding: 15px;

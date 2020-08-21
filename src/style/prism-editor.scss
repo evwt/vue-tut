@@ -76,10 +76,11 @@
     overflow-wrap: break-word;
     padding: 0;
   }
+
   .prism-editor__textarea--empty {
     -webkit-text-fill-color: inherit !important;
   }
-  /* highlight */
+
   .prism-editor__editor {
     position: relative;
     pointer-events: auto;
