@@ -1,75 +1,3 @@
-.prism-editor-wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: flex-start;
-  overflow: auto;
-  tab-size: 1.5em;
-  -moz-tab-size: 1.5em; }
-  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-    .prism-editor-wrapper .prism-editor__textarea {
-      color: transparent !important; }
-    .prism-editor-wrapper .prism-editor__textarea::selection {
-      background-color: #accef7 !important;
-      color: transparent !important; } }
-  .prism-editor-wrapper .prism-editor__container {
-    position: relative;
-    text-align: left;
-    box-sizing: border-box;
-    padding: 0;
-    overflow: hidden;
-    width: 100%; }
-  .prism-editor-wrapper .prism-editor__line-numbers {
-    height: 100%;
-    overflow: hidden;
-    flex-shrink: 0;
-    padding-top: 4px;
-    margin-top: 0;
-    margin-right: 10px; }
-  .prism-editor-wrapper .prism-editor__line-number {
-    /* padding: 0 3px 0 5px; */
-    text-align: right;
-    white-space: nowrap; }
-  .prism-editor-wrapper .prism-editor__textarea {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    resize: none;
-    color: inherit;
-    overflow: hidden;
-    -moz-osx-font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-fill-color: transparent; }
-  .prism-editor-wrapper .prism-editor__textarea,
-  .prism-editor-wrapper .prism-editor__editor {
-    margin: 0;
-    border: 0;
-    box-sizing: inherit;
-    display: inherit;
-    font-family: inherit;
-    font-size: inherit;
-    font-style: inherit;
-    font-variant-ligatures: inherit;
-    font-weight: inherit;
-    letter-spacing: inherit;
-    line-height: inherit;
-    tab-size: inherit;
-    text-indent: inherit;
-    text-rendering: inherit;
-    text-transform: inherit;
-    white-space: pre;
-    word-wrap: keep-all;
-    overflow-wrap: break-word;
-    padding: 0; }
-  .prism-editor-wrapper .prism-editor__textarea--empty {
-    -webkit-text-fill-color: inherit !important; }
-  .prism-editor-wrapper .prism-editor__editor {
-    position: relative;
-    pointer-events: auto;
-    overflow-x: auto; }
-
 .vue-tut {
   font-family: sans-serif;
   min-height: 100%; }
@@ -375,17 +303,77 @@
 .vue-tut .m-xl {
   margin: 25px; }
 
-.vue-tut .tutorial-section {
-  margin: 50px; }
-  .vue-tut .tutorial-section header p {
-    font-size: 16px;
-    line-height: 1.4; }
-  .vue-tut .tutorial-section header h1 {
-    font-size: 20px; }
-  .vue-tut .tutorial-section header h2 {
-    font-size: 26px; }
-  .vue-tut .tutorial-section:last-child {
-    margin-bottom: 0; }
+.prism-editor-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  overflow: auto;
+  tab-size: 1.5em;
+  -moz-tab-size: 1.5em; }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .prism-editor-wrapper .prism-editor__textarea {
+      color: transparent !important; }
+    .prism-editor-wrapper .prism-editor__textarea::selection {
+      background-color: #accef7 !important;
+      color: transparent !important; } }
+  .prism-editor-wrapper .prism-editor__container {
+    position: relative;
+    text-align: left;
+    box-sizing: border-box;
+    padding: 0;
+    overflow: hidden;
+    width: 100%; }
+  .prism-editor-wrapper .prism-editor__line-numbers {
+    height: 100%;
+    overflow: hidden;
+    flex-shrink: 0;
+    padding-top: 4px;
+    margin-top: 0;
+    margin-right: 10px; }
+  .prism-editor-wrapper .prism-editor__line-number {
+    /* padding: 0 3px 0 5px; */
+    text-align: right;
+    white-space: nowrap; }
+  .prism-editor-wrapper .prism-editor__textarea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    resize: none;
+    color: inherit;
+    overflow: hidden;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-fill-color: transparent; }
+  .prism-editor-wrapper .prism-editor__textarea,
+  .prism-editor-wrapper .prism-editor__editor {
+    margin: 0;
+    border: 0;
+    box-sizing: inherit;
+    display: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    font-style: inherit;
+    font-variant-ligatures: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    line-height: inherit;
+    tab-size: inherit;
+    text-indent: inherit;
+    text-rendering: inherit;
+    text-transform: inherit;
+    white-space: pre;
+    word-wrap: keep-all;
+    overflow-wrap: break-word;
+    padding: 0; }
+  .prism-editor-wrapper .prism-editor__textarea--empty {
+    -webkit-text-fill-color: inherit !important; }
+  .prism-editor-wrapper .prism-editor__editor {
+    position: relative;
+    pointer-events: auto;
+    overflow-x: auto; }
 
 .vue-tut {
   background-color: #fff;
@@ -411,61 +399,6 @@
     display: none; }
   .vue-tut .step-assets .step-after {
     display: none; }
-
-.vue-tut .tutorial-highlighter {
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-  font-size: 14px;
-  line-height: 1.5;
-  padding: 10px 5px 5px 0;
-  cursor: text; }
-
-.vue-tut .prism-editor-wrapper .prism-editor__container {
-  overflow-x: auto; }
-
-.vue-tut .prism-editor__textarea:focus {
-  outline: none; }
-
-.vue-tut .prism-editor__editor {
-  white-space: pre !important; }
-
-.vue-tut .prism-editor-wrapper {
-  font-size: 14px !important; }
-  .vue-tut .prism-editor-wrapper * {
-    font-size: 14px !important; }
-
-.vue-tut .prism-editor__line-numbers {
-  user-select: none;
-  cursor: default;
-  margin-right: 20px;
-  min-width: 42px;
-  background: transparent !important;
-  overflow: visible; }
-
-.vue-tut .prism-editor__line-number {
-  border-left: 5px solid transparent;
-  padding-left: 10px;
-  position: relative; }
-
-.vue-tut .prism-editor__line-number.highlight-line {
-  border-left: 5px solid gray;
-  background: rgba(128, 128, 128, 0.384); }
-
-.vue-tut .prism-editor__line-number.highlight-line:after {
-  content: "";
-  height: 21px;
-  background: rgba(128, 128, 128, 0.384);
-  pointer-events: none;
-  position: absolute;
-  z-index: 1;
-  max-width: 920px;
-  width: calc(50vw + 58px) !important; }
-
-.vue-tut textarea {
-  display: none !important; }
-
-.vue-tut pre > span {
-  position: relative;
-  z-index: 1; }
 
 .vue-tut .steps {
   padding-top: 50px; }
@@ -551,14 +484,72 @@
   right: 0;
   bottom: 0; }
 
-.vue-tut .fade-enter-active {
-  transition: opacity .75s; }
+.vue-tut .tutorial-section {
+  margin: 50px; }
+  .vue-tut .tutorial-section header p {
+    font-size: 16px;
+    line-height: 1.4; }
+  .vue-tut .tutorial-section header h1 {
+    font-size: 20px; }
+  .vue-tut .tutorial-section header h2 {
+    font-size: 26px; }
+  .vue-tut .tutorial-section:last-child {
+    margin-bottom: 0; }
 
-.vue-tut .fade-leave-active {
-  transition: opacity .75s; }
+.vue-tut .tutorial-highlighter {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 10px 5px 5px 0;
+  cursor: text; }
 
-.vue-tut .fade-enter, .vue-tut .fade-leave-to {
-  opacity: 0; }
+.vue-tut .prism-editor-wrapper .prism-editor__container {
+  overflow-x: auto; }
+
+.vue-tut .prism-editor__textarea:focus {
+  outline: none; }
+
+.vue-tut .prism-editor__editor {
+  white-space: pre !important; }
+
+.vue-tut .prism-editor-wrapper {
+  font-size: 14px !important; }
+  .vue-tut .prism-editor-wrapper * {
+    font-size: 14px !important; }
+
+.vue-tut .prism-editor__line-numbers {
+  user-select: none;
+  cursor: default;
+  margin-right: 20px;
+  min-width: 42px;
+  background: transparent !important;
+  overflow: visible; }
+
+.vue-tut .prism-editor__line-number {
+  border-left: 5px solid transparent;
+  padding-left: 10px;
+  position: relative; }
+
+.vue-tut .prism-editor__line-number.highlight-line {
+  border-left: 5px solid gray;
+  background: rgba(128, 128, 128, 0.384); }
+
+.vue-tut .prism-editor__line-number.highlight-line:after {
+  content: "";
+  height: 21px;
+  background: rgba(128, 128, 128, 0.384);
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+  max-width: 920px;
+  width: calc(50vw + 58px) !important; }
+
+.vue-tut textarea {
+  display: none !important; }
+
+.vue-tut pre > span {
+  position: relative;
+  z-index: 1; }
 
 @media only screen and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   main.vue-tut .prism-editor-wrapper .prism-editor__line-numbers .prism-editor__line-number {
@@ -612,6 +603,15 @@
     padding-bottom: 70px; }
   main.vue-tut .step-wrapper:first-child .step {
     margin-top: 40px; } }
+
+.vue-tut .fade-enter-active {
+  transition: opacity .75s; }
+
+.vue-tut .fade-leave-active {
+  transition: opacity .75s; }
+
+.vue-tut .fade-enter, .vue-tut .fade-leave-to {
+  opacity: 0; }
 
 pre {
   font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;

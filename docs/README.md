@@ -31,28 +31,19 @@ Vue.use(VueTut);
   <tutorial>
     <div slot="sections">
       <tutorial-section>
-        <div slot="title">
-          Hello World
-        </div>
-
         <tutorial-step slot="step">
-          <p>
-            Add the HelloWorld component to App.vue
-          </p>
-
-          <aside slot="aside">
-            <tutorial-highlighter :text="hello1" :highlight-lines="[4, 14]" />
-          </aside>
+          <p>...</p>
+          <tutorial-highlighter slot="aside" :highlight-lines="[2]" :text="step1" />
         </tutorial-step>
 
         <tutorial-step slot="step">
-          <p>
-            Add some style
-          </p>
+          <p>...</p>
+          <tutorial-highlighter slot="aside" :highlight-lines="[/script/]" :text="step2" />
+        </tutorial-step>
 
-          <aside slot="aside">
-            <tutorial-highlighter :text="hello2" :highlight-lines="[/font/]" />
-          </aside>
+        <tutorial-step slot="step">
+          <p>...</p>
+          <tutorial-highlighter slot="aside" :highlight-lines="['10:14']" :text="step3" />
         </tutorial-step>
       </tutorial-section>
     </div>
@@ -60,25 +51,35 @@ Vue.use(VueTut);
 </template>
 
 <script>
-import hello1 from '@/assets/hello1';
-import hello2 from '@/assets/hello2';
+let step1 = `<template>
+  <div id="app">My Vue SFC</div>
+</template>`;
+
+let step2 = `${step1}
+
+<script>
+export default {
+}
+<\/script>`;
+
+let step3 = `${step2}
+
+<style>
+#app {
+  padding: 10px;
+}
+</style>`;
 
 export default {
   data() {
     return {
-      hello1,
-      hello2
+      step1,
+      step2,
+      step3
     };
   }
 };
 </script>
-
-<style lang="scss">
-html, body {
-  margin: 0;
-  padding: 0;
-}
-</style>
 ```
 
 ## Examples

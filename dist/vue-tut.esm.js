@@ -39,8 +39,12 @@ g,0<d.length&&(d=za[d[0]])&&(a.c[e]=d));}a.c[e]||(d=za[e])&&(a.c[e]=d);for(d=0;d
 //
 
 // <img width="915" alt="90838647-03776580-e31b-11ea-8e27-00bdcb700dbe" src="https://user-images.githubusercontent.com/611996/90840195-f65c7580-e31e-11ea-893c-9f64ad753814.png">
-//
-// The header slots are all optional. No tutorial header will displayed if you omit all of them.
+// <br><br>
+// Notes:
+// <br>
+// - The header slots are all optional. No tutorial header will displayed if you omit all of them.
+// <br>
+// - The footer slot is optional
 var script = {
 
   name: 'Tutorial',
@@ -67,6 +71,7 @@ var script = {
     // <br><br>
     // Select from this list: https://github.com/PrismJS/prism/tree/master/components
     // <br><br>
+    // Each TutorialHighlighter component will need a lang="" attribute that is one of these.
 
     codeLangs: {
       type: Array,
@@ -3438,6 +3443,8 @@ Prism.languages.js = Prism.languages.javascript;
 //
 
 // Highlight lines of text with line numbers or regexes.
+// <br><br>
+// <img width="754" alt="Screen Shot 2020-08-21 at 5 57 48 PM" src="https://user-images.githubusercontent.com/611996/90941476-dd63cb00-e3d7-11ea-9213-111edb7570b3.png">
 var script$4 = {
   components: {
     PrismEditor
@@ -3455,6 +3462,10 @@ var script$4 = {
       required: true
     },
     // Language to use for syntax highlighting
+    // <br><br>
+    // Select from this list: https://github.com/PrismJS/prism/tree/master/components
+    // <br><br>
+    // Note: Must be setup in the Tutorial component first
     lang: {
       type: String,
       default: 'vue'
