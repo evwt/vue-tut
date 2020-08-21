@@ -1,7 +1,7 @@
 {
   "name": "vue-tut",
   "description": "Easily build beautiful tutorials with Vue",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "main": "dist/vue-tut.umd.js",
   "module": "dist/vue-tut.esm.js",
   "unpkg": "dist/vue-tut.min.js",
