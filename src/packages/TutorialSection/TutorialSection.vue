@@ -4,7 +4,7 @@
       <h1 class="m-s-sm">
         <!-- The name of the section, defaults to "Section #" -->
         <slot name="name">
-          <!-- Section # -->
+          <!-- "Section #"" -->
           <template v-if="!$slots.name && index">
             Section {{ index }}
           </template>
@@ -39,6 +39,7 @@
 import debounce from 'lodash/debounce';
 import TutorialAside from '../TutorialAside';
 
+// <img width="915" alt="Screen Shot 2020-08-20 at 7 26 00 PM" src="https://user-images.githubusercontent.com/611996/90838647-03776580-e31b-11ea-8e27-00bdcb700dbe.png">
 export default {
   name: 'TutorialSection',
 

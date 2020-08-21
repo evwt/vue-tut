@@ -6,11 +6,12 @@
           <main>
             <label class="step-label m-s-med">
               <!-- The name of the step -->
-              <slot name="name" />
-              <!-- Step # -->
-              <template v-if="!$slots.name && index">
-                Step {{ index }}
-              </template>
+              <slot name="name">
+                <!-- "Step #"-->
+                <template v-if="!$slots.name && index">
+                  Step {{ index }}
+                </template>
+              </slot>
             </label>
 
             <!-- The content of the step box -->
@@ -30,6 +31,7 @@
 <script>
 import Intersect from 'vue-intersect';
 
+// <img width="915" alt="Screen Shot 2020-08-20 at 7 26 00 PM" src="https://user-images.githubusercontent.com/611996/90838647-03776580-e31b-11ea-8e27-00bdcb700dbe.png">
 export default {
   name: 'TutorialStep',
 

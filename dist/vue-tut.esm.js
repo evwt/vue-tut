@@ -38,6 +38,7 @@ g,0<d.length&&(d=za[d[0]])&&(a.c[e]=d));}a.c[e]||(d=za[e])&&(a.c[e]=d);for(d=0;d
 
 //
 
+// <img width="915" alt="Screen Shot 2020-08-20 at 7 26 00 PM" src="https://user-images.githubusercontent.com/611996/90838647-03776580-e31b-11ea-8e27-00bdcb700dbe.png">
 var script = {
   name: 'Tutorial',
 
@@ -763,6 +764,7 @@ if (GlobalVue$1) {
 
 //
 
+// <img width="915" alt="Screen Shot 2020-08-20 at 7 26 00 PM" src="https://user-images.githubusercontent.com/611996/90838647-03776580-e31b-11ea-8e27-00bdcb700dbe.png">
 var script$2 = {
   name: 'TutorialSection',
 
@@ -996,6 +998,7 @@ var Intersect = {
 
 //
 
+// <img width="915" alt="Screen Shot 2020-08-20 at 7 26 00 PM" src="https://user-images.githubusercontent.com/611996/90838647-03776580-e31b-11ea-8e27-00bdcb700dbe.png">
 var script$3 = {
   name: 'TutorialStep',
 
@@ -1054,17 +1057,17 @@ var __vue_render__$2 = function() {
                   "label",
                   { staticClass: "step-label m-s-med" },
                   [
-                    _vm._t("name"),
-                    _vm._v(" "),
-                    !_vm.$slots.name && _vm.index
-                      ? [
-                          _vm._v(
-                            "\n              Step " +
-                              _vm._s(_vm.index) +
-                              "\n            "
-                          )
-                        ]
-                      : _vm._e()
+                    _vm._t("name", [
+                      !_vm.$slots.name && _vm.index
+                        ? [
+                            _vm._v(
+                              "\n                Step " +
+                                _vm._s(_vm.index) +
+                                "\n              "
+                            )
+                          ]
+                        : _vm._e()
+                    ])
                   ],
                   2
                 ),

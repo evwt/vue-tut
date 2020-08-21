@@ -36,6 +36,7 @@ import '../../style/vue-tut-highlighter.scss';
 import '../../style/vue-tut-anim.scss';
 import '../../style/vue-tut-mobile.scss';
 
+// <img width="915" alt="Screen Shot 2020-08-20 at 7 26 00 PM" src="https://user-images.githubusercontent.com/611996/90838647-03776580-e31b-11ea-8e27-00bdcb700dbe.png">
 export default {
   name: 'Tutorial',
 

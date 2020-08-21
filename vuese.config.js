@@ -1,5 +1,5 @@
 module.exports = {
-  outDir: 'vuese',
+  outDir: 'docs',
   genType: 'markdown',
   exclude: ['**/TutorialAside.vue']
 };

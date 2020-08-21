@@ -46,6 +46,7 @@
 
 	//
 
+	// <img width="915" alt="Screen Shot 2020-08-20 at 7 26 00 PM" src="https://user-images.githubusercontent.com/611996/90838647-03776580-e31b-11ea-8e27-00bdcb700dbe.png">
 	var script = {
 	  name: 'Tutorial',
 
@@ -771,6 +772,7 @@
 
 	//
 
+	// <img width="915" alt="Screen Shot 2020-08-20 at 7 26 00 PM" src="https://user-images.githubusercontent.com/611996/90838647-03776580-e31b-11ea-8e27-00bdcb700dbe.png">
 	var script$2 = {
 	  name: 'TutorialSection',
 
@@ -1004,6 +1006,7 @@
 
 	//
 
+	// <img width="915" alt="Screen Shot 2020-08-20 at 7 26 00 PM" src="https://user-images.githubusercontent.com/611996/90838647-03776580-e31b-11ea-8e27-00bdcb700dbe.png">
 	var script$3 = {
 	  name: 'TutorialStep',
 
@@ -1062,17 +1065,17 @@
 	                  "label",
 	                  { staticClass: "step-label m-s-med" },
 	                  [
-	                    _vm._t("name"),
-	                    _vm._v(" "),
-	                    !_vm.$slots.name && _vm.index
-	                      ? [
-	                          _vm._v(
-	                            "\n              Step " +
-	                              _vm._s(_vm.index) +
-	                              "\n            "
-	                          )
-	                        ]
-	                      : _vm._e()
+	                    _vm._t("name", [
+	                      !_vm.$slots.name && _vm.index
+	                        ? [
+	                            _vm._v(
+	                              "\n                Step " +
+	                                _vm._s(_vm.index) +
+	                                "\n              "
+	                            )
+	                          ]
+	                        : _vm._e()
+	                    ])
 	                  ],
 	                  2
 	                ),
