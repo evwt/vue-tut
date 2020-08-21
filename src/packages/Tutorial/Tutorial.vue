@@ -43,8 +43,12 @@ import '../../style/vue-tut-anim.scss';
 import '../../style/vue-tut-mobile.scss';
 
 // <img width="915" alt="90838647-03776580-e31b-11ea-8e27-00bdcb700dbe" src="https://user-images.githubusercontent.com/611996/90840195-f65c7580-e31e-11ea-893c-9f64ad753814.png">
-//
-// The header slots are all optional. No tutorial header will displayed if you omit all of them.
+// <br><br>
+// Notes:
+// <br>
+// - The header slots are all optional. No tutorial header will displayed if you omit all of them.
+// <br>
+// - The footer slot is optional
 export default {
 
   name: 'Tutorial',
@@ -71,6 +75,7 @@ export default {
     // <br><br>
     // Select from this list: https://github.com/PrismJS/prism/tree/master/components
     // <br><br>
+    // Each TutorialHighlighter component will need a lang="" attribute that is one of these.
 
     codeLangs: {
       type: Array,
