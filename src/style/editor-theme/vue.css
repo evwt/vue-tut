@@ -1,6 +1,7 @@
-pre code {
+pre {
   font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
   color: #525252;
+  background: #f8f8f8;
 }
 
 .token.selector,

@@ -1,7 +1,7 @@
 <template>
   <prism-editor
     v-model="text"
-    class="tutorial-highlighter"
+    class="tutorial-highlighter prism-share-background"
     :highlight="highlighter"
     line-numbers />
 </template>
@@ -13,10 +13,7 @@ import 'prismjs/components/prism-clike';
 import 'prismjs/components/prism-markup';
 import 'prismjs/components/prism-javascript';
 import 'prismjs/components/prism-css';
-import 'prismjs/themes/prism-tomorrow.css';
-// import 'prism-themes/themes/prism-hopscotch.css';
-// import '@/style/editor-theme-vue.scss';
-// import '@/style/editor-theme-ghcolors.scss';
+
 // Highlight lines of text with line numbers or regexes.
 export default {
   components: {
@@ -45,12 +42,14 @@ export default {
       if (editorPre) {
         editorPre.classList.add('language-');
 
-        let sharedBgEl = this.$el.closest('.prism-share-background');
+        let sharedBgEls = [...document.querySelectorAll('.prism-share-background')];
 
-        if (sharedBgEl) {
-          let style = window.getComputedStyle(editorPre);
-          sharedBgEl.style.backgroundColor = style.backgroundColor;
-          sharedBgEl.style.color = style.color;
+        if (sharedBgEls.length) {
+          for (const sharedBgEl of sharedBgEls) {
+            let style = window.getComputedStyle(editorPre);
+            sharedBgEl.style.backgroundColor = style.backgroundColor;
+            sharedBgEl.style.color = style.color;
+          }
         }
       }
     },

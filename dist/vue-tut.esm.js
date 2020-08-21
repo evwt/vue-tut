@@ -42,7 +42,27 @@ g,0<d.length&&(d=za[d[0]])&&(a.c[e]=d));}a.c[e]||(d=za[e])&&(a.c[e]=d);for(d=0;d
 //
 // The header slots are all optional. No tutorial header will displayed if you omit all of them.
 var script = {
+
   name: 'Tutorial',
+
+  props: {
+    // Color theme for the highlighter.
+    // <br><br>
+    // prism-themes themes - see previews here: https://github.com/PrismJS/prism-themes
+    // <br>
+    // `a11y-dark` / `atom-dark` / `base16-ateliersulphurpool.light` / `cb` / `darcula` / `dracula` / `duotone-dark` / `duotone-earth` / `duotone-forest` / `duotone-light` / `duotone-sea` / `duotone-space` / `ghcolors` / `hopscotch` / `material-dark` / `material-light` / `material-oceanic` / `nord` / `pojoaque` / `shades-of-purple` / `synthwave84` / `vs` / `vsc-dark-plus` / `xonokai`
+    // <br><br>
+    // Official themes - see previews here: https://prismjs.com/
+    // <br>
+    // `coy` / `dark` / `funky` / `okaidia` / `prism` / `solarizedlight` / `tomorrow` / `twilight`
+    // <br><br>
+    // vue-tut themes
+    // `vue`
+    codeTheme: {
+      type: String,
+      default: 'vue'
+    }
+  },
 
   data() {
     return {
@@ -59,6 +79,53 @@ var script = {
     setTimeout(() => {
       this.loaded = true;
     }, 300);
+
+    this.setTheme();
+  },
+
+  methods: {
+    async setTheme() {
+      if (this.codeTheme === 'vue') {
+        Promise.resolve().then(function () { return vue; });
+      } else if ([
+        'coy',
+        'dark',
+        'funky',
+        'okaidia',
+        'prism',
+        'solarizedlight',
+        'tomorrow',
+        'twilight'
+      ].includes(this.codeTheme)) {
+        import(`prismjs/themes/prism-${this.codeTheme}.css`);
+      } else if ([
+        'a11y-dark',
+        'atom-dark',
+        'base16-ateliersulphurpool.light',
+        'cb',
+        'darcula',
+        'dracula',
+        'duotone-dark',
+        'duotone-earth',
+        'duotone-forest',
+        'duotone-light',
+        'duotone-sea',
+        'duotone-space',
+        'ghcolors',
+        'hopscotch',
+        'material-dark',
+        'material-light',
+        'material-oceanic',
+        'nord',
+        'pojoaque',
+        'shades-of-purple',
+        'synthwave84',
+        'vs',
+        'vsc-dark-plus',
+        'xonokai'].includes(this.codeTheme)) {
+        import(`prism-themes/themes/prism-${this.codeTheme}.css`);
+      }
+    }
   }
 };
 
@@ -3216,9 +3283,7 @@ Prism.languages.js = Prism.languages.javascript;
 }(Prism));
 
 //
-// import 'prism-themes/themes/prism-hopscotch.css';
-// import '@/style/editor-theme-vue.scss';
-// import '@/style/editor-theme-ghcolors.scss';
+
 // Highlight lines of text with line numbers or regexes.
 var script$4 = {
   components: {
@@ -3247,12 +3312,14 @@ var script$4 = {
       if (editorPre) {
         editorPre.classList.add('language-');
 
-        let sharedBgEl = this.$el.closest('.prism-share-background');
+        let sharedBgEls = [...document.querySelectorAll('.prism-share-background')];
 
-        if (sharedBgEl) {
-          let style = window.getComputedStyle(editorPre);
-          sharedBgEl.style.backgroundColor = style.backgroundColor;
-          sharedBgEl.style.color = style.color;
+        if (sharedBgEls.length) {
+          for (const sharedBgEl of sharedBgEls) {
+            let style = window.getComputedStyle(editorPre);
+            sharedBgEl.style.backgroundColor = style.backgroundColor;
+            sharedBgEl.style.color = style.color;
+          }
         }
       }
     },
@@ -3302,7 +3369,7 @@ var __vue_render__$3 = function() {
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
   return _c("prism-editor", {
-    staticClass: "tutorial-highlighter",
+    staticClass: "tutorial-highlighter prism-share-background",
     attrs: { highlight: _vm.highlighter, "line-numbers": "" },
     model: {
       value: _vm.text,
@@ -3375,6 +3442,13 @@ function install$5(Vue) {
 var index = {
   install: install$5
 };
+
+var undefined$1 = undefined;
+
+var vue = /*#__PURE__*/Object.freeze({
+	__proto__: null,
+	'default': undefined$1
+});
 
 export default index;
 export { __vue_component__ as Tutorial, __vue_component__$4 as TutorialHighlighter, __vue_component__$2 as TutorialSection, __vue_component__$3 as TutorialStep };

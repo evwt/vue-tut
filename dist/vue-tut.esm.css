@@ -1,20 +1,3 @@
-.vue-tut {
-  font-family: sans-serif;
-  min-height: 100%; }
-  .vue-tut h1, .vue-tut h2, .vue-tut h3, .vue-tut h4, .vue-tut h5, .vue-tut h6, .vue-tut p {
-    margin: 0;
-    padding: 0;
-    line-height: 1.15; }
-  .vue-tut hr {
-    height: 0;
-    border: 0;
-    border-bottom: 1px solid #e8e8e8; }
-  .vue-tut * {
-    box-sizing: border-box; }
-  .vue-tut *:before,
-  .vue-tut *:after {
-    box-sizing: border-box; }
-
 .vue-tut .h-100 {
   height: 100%; }
 
@@ -303,17 +286,22 @@
 .vue-tut .m-xl {
   margin: 25px; }
 
-.vue-tut .tutorial-section {
-  margin: 50px; }
-  .vue-tut .tutorial-section header p {
-    font-size: 16px;
-    line-height: 1.4; }
-  .vue-tut .tutorial-section header h1 {
-    font-size: 20px; }
-  .vue-tut .tutorial-section header h2 {
-    font-size: 26px; }
-  .vue-tut .tutorial-section:last-child {
-    margin-bottom: 0; }
+.vue-tut {
+  font-family: sans-serif;
+  min-height: 100%; }
+  .vue-tut h1, .vue-tut h2, .vue-tut h3, .vue-tut h4, .vue-tut h5, .vue-tut h6, .vue-tut p {
+    margin: 0;
+    padding: 0;
+    line-height: 1.15; }
+  .vue-tut hr {
+    height: 0;
+    border: 0;
+    border-bottom: 1px solid #e8e8e8; }
+  .vue-tut * {
+    box-sizing: border-box; }
+  .vue-tut *:before,
+  .vue-tut *:after {
+    box-sizing: border-box; }
 
 .prism-editor-wrapper {
   width: 100%;
@@ -385,53 +373,55 @@
     -webkit-text-fill-color: inherit !important; }
   .prism-editor-wrapper .prism-editor__editor {
     position: relative;
-    pointer-events: none; }
+    pointer-events: auto;
+    overflow-x: auto; }
 
-.vue-tut .tutorial-highlighter {
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-  font-size: 14px;
-  line-height: 1.5;
-  padding: 10px 5px 5px 0;
-  cursor: text; }
+.vue-tut .tutorial-section {
+  margin: 50px; }
+  .vue-tut .tutorial-section header p {
+    font-size: 16px;
+    line-height: 1.4; }
+  .vue-tut .tutorial-section header h1 {
+    font-size: 20px; }
+  .vue-tut .tutorial-section header h2 {
+    font-size: 26px; }
+  .vue-tut .tutorial-section:last-child {
+    margin-bottom: 0; }
 
-.vue-tut .prism-editor-wrapper .prism-editor__container {
-  overflow-x: auto; }
-
-.vue-tut .prism-editor__textarea:focus {
-  outline: none; }
-
-.vue-tut .prism-editor__editor {
-  white-space: pre; }
-
-.vue-tut .prism-editor__line-numbers {
-  user-select: none;
-  cursor: default;
-  margin-right: 20px; }
-
-.vue-tut .prism-editor__line-number {
-  border-left: 5px solid transparent;
-  padding-left: 10px; }
-
-.vue-tut .prism-editor__line-number.highlight-line {
-  border-left: 5px solid gray;
-  background: rgba(128, 128, 128, 0.384); }
-
-.vue-tut .prism-editor__line-number.highlight-line:after {
-  content: "";
-  height: 21px;
-  background: rgba(128, 128, 128, 0.384);
-  pointer-events: none;
-  position: absolute;
-  z-index: 1;
-  max-width: 920px;
-  width: calc(50vw + 8.33333%) !important; }
-
-.vue-tut textarea {
-  display: none !important; }
-
-.vue-tut pre > span {
-  position: relative;
-  z-index: 1; }
+@media all and (max-width: 980px) {
+  main.vue-tut .tutorial-header {
+    padding: 15px;
+    margin-bottom: 5px; }
+    main.vue-tut .tutorial-header > h1.m-s-sm {
+      margin-bottom: 5px; }
+    main.vue-tut .tutorial-header > h2.m-s-xl {
+      margin-bottom: 15px; }
+  main.vue-tut .sections .tutorial-section {
+    margin: 15px; }
+  main.vue-tut .step {
+    margin-top: 40px;
+    margin-bottom: 20px; }
+  main.vue-tut .steps {
+    padding-top: 0; }
+  main.vue-tut .steps > .step-contents {
+    width: 100%;
+    margin: 0; }
+  main.vue-tut .step-contents .step-aside {
+    display: block; }
+    main.vue-tut .step-contents .step-aside aside {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    main.vue-tut .step-contents .step-aside pre {
+      white-space: pre; }
+    main.vue-tut .step-contents .step-aside .highlight-line:after {
+      width: calc(100vw - 62px) !important; }
+  main.vue-tut .step-assets {
+    display: none; }
+  main.vue-tut .step-wrapper {
+    padding-bottom: 70px; }
+  main.vue-tut .step-wrapper:first-child .step {
+    margin-top: 40px; } }
 
 .vue-tut .steps {
   padding-top: 50px; }
@@ -534,158 +524,128 @@
 .vue-tut .fade-enter, .vue-tut .fade-leave-to {
   opacity: 0; }
 
-@media all and (max-width: 980px) {
-  main.vue-tut .tutorial-header {
-    padding: 15px;
-    margin-bottom: 5px; }
-    main.vue-tut .tutorial-header > h1.m-s-sm {
-      margin-bottom: 5px; }
-    main.vue-tut .tutorial-header > h2.m-s-xl {
-      margin-bottom: 15px; }
-  main.vue-tut .sections .tutorial-section {
-    margin: 15px; }
-  main.vue-tut .step {
-    margin-top: 40px;
-    margin-bottom: 20px; }
-  main.vue-tut .steps {
-    padding-top: 0; }
-  main.vue-tut .steps > .step-contents {
-    width: 100%;
-    margin: 0; }
-  main.vue-tut .step-contents .step-aside {
-    display: block; }
-    main.vue-tut .step-contents .step-aside aside {
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-    main.vue-tut .step-contents .step-aside pre {
-      white-space: pre; }
-    main.vue-tut .step-contents .step-aside .highlight-line:after {
-      width: calc(100vw - 62px) !important; }
-  main.vue-tut .step-assets {
-    display: none; }
-  main.vue-tut .step-wrapper:first-child .step {
-    margin-top: 40px; } }
+.vue-tut .tutorial-highlighter {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 10px 5px 5px 0;
+  cursor: text; }
 
-/**
- * prism.js tomorrow night eighties for JavaScript, CoffeeScript, CSS and HTML
- * Based on https://github.com/chriskempson/tomorrow-theme
- * @author Rose Pritchard
- */
+.vue-tut .prism-editor-wrapper .prism-editor__container {
+  overflow-x: auto; }
 
-code[class*="language-"],
-pre[class*="language-"] {
-	color: #ccc;
-	background: none;
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	font-size: 1em;
-	text-align: left;
-	white-space: pre;
-	word-spacing: normal;
-	word-break: normal;
-	word-wrap: normal;
-	line-height: 1.5;
+.vue-tut .prism-editor__textarea:focus {
+  outline: none; }
 
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
-	tab-size: 4;
+.vue-tut .prism-editor__editor {
+  white-space: pre; }
 
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
+.vue-tut .prism-editor__line-numbers {
+  user-select: none;
+  cursor: default;
+  margin-right: 20px; }
 
-}
+.vue-tut .prism-editor__line-number {
+  border-left: 5px solid transparent;
+  padding-left: 10px; }
 
-/* Code blocks */
-pre[class*="language-"] {
-	padding: 1em;
-	margin: .5em 0;
-	overflow: auto;
-}
+.vue-tut .prism-editor__line-number.highlight-line {
+  border-left: 5px solid gray;
+  background: rgba(128, 128, 128, 0.384); }
 
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-	background: #2d2d2d;
-}
+.vue-tut .prism-editor__line-number.highlight-line:after {
+  content: "";
+  height: 21px;
+  background: rgba(128, 128, 128, 0.384);
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+  max-width: 920px;
+  width: calc(50vw + 8.33333%) !important; }
 
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-	padding: .1em;
-	border-radius: .3em;
-	white-space: normal;
-}
+.vue-tut textarea {
+  display: none !important; }
 
-.token.comment,
-.token.block-comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-	color: #999;
-}
+.vue-tut pre > span {
+  position: relative;
+  z-index: 1; }
 
-.token.punctuation {
-	color: #ccc;
-}
-
-.token.tag,
-.token.attr-name,
-.token.namespace,
-.token.deleted {
-	color: #e2777a;
-}
-
-.token.function-name {
-	color: #6196cc;
-}
-
-.token.boolean,
-.token.number,
-.token.function {
-	color: #f08d49;
-}
-
-.token.property,
-.token.class-name,
-.token.constant,
-.token.symbol {
-	color: #f8c555;
+pre {
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  color: #525252;
+  background: #f8f8f8;
 }
 
 .token.selector,
-.token.important,
-.token.atrule,
-.token.keyword,
-.token.builtin {
-	color: #cc99cd;
+.token.tag,
+.token.tag .token.title,
+.token.change,
+.token.winutils,
+.token.flow,
+.token.tex .token.special {
+  color: #2973b7;
 }
 
-.token.string,
-.token.char,
+.token.symbol,
+.token.symbol .token.string,
 .token.attr-value,
+.token.value,
 .token.regex,
-.token.variable {
-	color: #7ec699;
+.token.string,
+.token.subst,
+.token.haskell .token.type,
+.token.preprocessor,
+.token.ruby .token.class .token.parent,
+.token.built_in,
+.token.sql .token.aggregate,
+.token.django .token.template_tag,
+.token.django .token.variable,
+.token.smalltalk .token.class,
+.token.javadoc,
+.token.django .token.filter .token.argument,
+.token.smalltalk .token.localvars,
+.token.smalltalk .token.array,
+.token.attr_selector,
+.token.pseudo,
+.token.addition,
+.token.stream,
+.token.envvar,
+.token.apache .token.tag,
+.token.apache .token.cbracket,
+.token.tex .token.command,
+.token.prompt {
+  color: #42b983;
+}
+.token.function .token.keyword,
+.token.constant {
+  color: #0092db;
 }
 
-.token.operator,
-.token.entity,
-.token.url {
-	color: #67cdcc;
+.token.property,
+.token.keyword,
+.token.attribute {
+  color: #d63200;
 }
-
-.token.important,
-.token.bold {
-	font-weight: bold;
+.token.number,
+.token.literal {
+  color: #a32eff;
 }
-.token.italic {
-	font-style: italic;
+.token.class .token.title {
+  color: #fff;
 }
-
-.token.entity {
-	cursor: help;
+.token.title {
+  color: #a6e22e;
 }
-
-.token.inserted {
-	color: green;
+.token.tag .token.value,
+.token.comment,
+.token.java .token.annotation,
+.token.python .token.decorator,
+.token.template_comment,
+.token.pi,
+.token.doctype,
+.token.deletion,
+.token.shebang,
+.token.apache .token.sqbracket,
+.token.tex .token.formula {
+  color: #707070;
 }
