@@ -28,6 +28,9 @@
 .vue-tut h1, .vue-tut h2, .vue-tut h3, .vue-tut h4, .vue-tut h5, .vue-tut h6 {
   color: var(--tut-color-headers);
 }
+.vue-tut h1 {
+  color: var(--tut-color-gray-dark);
+}
 .vue-tut p {
   color: var(--tut-color-body);
   line-height: 1.4;
@@ -40,10 +43,10 @@
 }
 .vue-tut .prism-editor-wrapper .prism-editor__line-number.highlight-line {
   border-left: 5px solid var(--tut-color-accent);
-  background: #42b98338;
+  background: #42b9832a;
 }
 .vue-tut .prism-editor-wrapper .prism-editor__line-number.highlight-line:after {
-  background: #42b98338;
+  background: #42b9832a;
 }
 .vue-tut .step-intersected .step {
   border-left: 10px solid var(--tut-color-accent);

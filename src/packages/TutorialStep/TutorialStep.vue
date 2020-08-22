@@ -1,5 +1,5 @@
 <template>
-  <intersect root-margin="-190px 0px 0px 0px" @enter="intersected = true" @leave="intersected = false">
+  <intersect root-margin="-260px 0px 0px 0px" @enter="intersected = true" @leave="intersected = false">
     <div :class="intersectedClass" class="step-wrapper">
       <div class="step-container">
         <div class="step p-w-med p-e-xl p-n-lg p-s-lg">

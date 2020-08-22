@@ -245,23 +245,16 @@ var __vue_render__ = function() {
         _vm.$slots.title ||
         _vm.$slots.intro ||
         _vm.$slots.default
-          ? _c(
-              "header",
-              { staticClass: "tutorial-header" },
-              [
-                _c("h1", { staticClass: "m-s-sm" }, [_vm._t("eyebrow")], 2),
-                _vm._v(" "),
-                _c("h2", { staticClass: "m-s-xl" }, [_vm._t("title")], 2),
-                _vm._v(" "),
-                _c("p", [_vm._t("intro")], 2),
-                _vm._v(" "),
-                _vm._t("default")
-              ],
-              2
-            )
+          ? _c("header", { staticClass: "tutorial-header" }, [
+              _c("h1", { staticClass: "m-s-sm" }, [_vm._t("eyebrow")], 2),
+              _vm._v(" "),
+              _c("h2", { staticClass: "m-s-xl" }, [_vm._t("title")], 2),
+              _vm._v(" "),
+              _c("p", [_vm._t("intro")], 2)
+            ])
           : _vm._e(),
         _vm._v(" "),
-        _c("div", { staticClass: "sections" }, [_vm._t("sections")], 2),
+        _c("div", { staticClass: "sections" }, [_vm._t("default")], 2),
         _vm._v(" "),
         _c("footer", { staticClass: "tutorial-footer" }, [_vm._t("footer")], 2)
       ])
@@ -1141,7 +1134,7 @@ var __vue_render__$2 = function() {
   return _c(
     "intersect",
     {
-      attrs: { "root-margin": "-190px 0px 0px 0px" },
+      attrs: { "root-margin": "-260px 0px 0px 0px" },
       on: {
         enter: function($event) {
           _vm.intersected = true;

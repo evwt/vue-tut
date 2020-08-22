@@ -13,14 +13,11 @@
         <!-- Paragraph intro text under the title -->
         <slot name="intro" />
       </p>
-
-      <!-- Anything you want to put in the header. -->
-      <slot />
     </header>
 
     <div class="sections">
-      <!-- Should be a series of tutorial-section components -->
-      <slot name="sections" />
+      <!-- Should be a series of TutorialSection components -->
+      <slot />
     </div>
 
     <footer class="tutorial-footer">

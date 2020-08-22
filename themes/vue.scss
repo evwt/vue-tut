@@ -33,6 +33,10 @@
     color: var(--tut-color-headers);
   }
 
+  h1 {
+    color: var(--tut-color-gray-dark);
+  }
+
   p {
     color: var(--tut-color-body);
     line-height: 1.4;
@@ -48,11 +52,11 @@
 
   .prism-editor-wrapper .prism-editor__line-number.highlight-line {
     border-left: 5px solid var(--tut-color-accent);
-    background: #42b98338;
+    background: #42b9832a;
   }
 
   .prism-editor-wrapper .prism-editor__line-number.highlight-line:after {
-    background: #42b98338;
+    background: #42b9832a;
   }
 
   .step-intersected .step {
