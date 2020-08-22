@@ -29,24 +29,22 @@ Vue.use(VueTut);
 ```vue
 <template>
   <tutorial>
-    <div slot="sections">
-      <tutorial-section>
-        <tutorial-step slot="step">
-          <p>...</p>
-          <tutorial-highlighter slot="aside" :highlight-lines="[2]" :text="step1" />
-        </tutorial-step>
+    <tutorial-section>
+      <tutorial-step slot="step">
+        <p>...</p>
+        <tutorial-highlighter slot="aside" :highlight-lines="[2]" :text="step1" />
+      </tutorial-step>
 
-        <tutorial-step slot="step">
-          <p>...</p>
-          <tutorial-highlighter slot="aside" :highlight-lines="[/script/]" :text="step2" />
-        </tutorial-step>
+      <tutorial-step slot="step">
+        <p>...</p>
+        <tutorial-highlighter slot="aside" :highlight-lines="[/script/]" :text="step2" />
+      </tutorial-step>
 
-        <tutorial-step slot="step">
-          <p>...</p>
-          <tutorial-highlighter slot="aside" :highlight-lines="['10:14']" :text="step3" />
-        </tutorial-step>
-      </tutorial-section>
-    </div>
+      <tutorial-step slot="step">
+        <p>...</p>
+        <tutorial-highlighter slot="aside" :highlight-lines="['10:14']" :text="step3" />
+      </tutorial-step>
+    </tutorial-section>
   </tutorial>
 </template>
 
