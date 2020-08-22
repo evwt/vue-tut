@@ -249,10 +249,7 @@
 	  var _c = _vm._self._c || _h;
 	  return _vm.loaded
 	    ? _c("main", { staticClass: "vue-tut" }, [
-	        _vm.$slots.eyebrow ||
-	        _vm.$slots.title ||
-	        _vm.$slots.intro ||
-	        _vm.$slots.default
+	        _vm.$slots.eyebrow || _vm.$slots.title || _vm.$slots.intro
 	          ? _c("header", { staticClass: "tutorial-header" }, [
 	              _c("h1", { staticClass: "m-s-sm" }, [_vm._t("eyebrow")], 2),
 	              _vm._v(" "),

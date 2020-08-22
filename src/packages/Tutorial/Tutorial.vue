@@ -1,6 +1,6 @@
 <template>
   <main v-if="loaded" class="vue-tut">
-    <header v-if="$slots.eyebrow || $slots.title || $slots.intro || $slots.default" class="tutorial-header">
+    <header v-if="$slots.eyebrow || $slots.title || $slots.intro" class="tutorial-header">
       <h1 class="m-s-sm">
         <!-- Category/summary/group of the tutorial -->
         <slot name="eyebrow" />
