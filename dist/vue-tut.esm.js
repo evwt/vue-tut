@@ -75,7 +75,7 @@ var script = {
 
     codeLangs: {
       type: Array,
-      default: ['clike', 'markup', 'javascript', 'css']
+      default: () => ['clike', 'markup', 'javascript', 'css']
     }
   },
 

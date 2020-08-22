@@ -8,7 +8,7 @@
 |Name|Description|Type|Required|Default|
 |---|---|---|---|---|
 |codeTheme|Color theme for the highlighter. <br><br> prism-themes themes - see previews here: https://github.com/PrismJS/prism-themes <br> `a11y-dark` / `atom-dark` / `base16-ateliersulphurpool.light` / `cb` / `darcula` / `dracula` / `duotone-dark` / `duotone-earth` / `duotone-forest` / `duotone-light` / `duotone-sea` / `duotone-space` / `ghcolors` / `hopscotch` / `material-dark` / `material-light` / `material-oceanic` / `nord` / `pojoaque` / `shades-of-purple` / `synthwave84` / `vs` / `vsc-dark-plus` / `xonokai` <br><br> Official themes - see previews here: https://prismjs.com/ <br> `coy` / `dark` / `funky` / `okaidia` / `prism` / `solarizedlight` / `tomorrow` / `twilight` <br><br> vue-tut themes `vue`|`String`|`false`|vue|
-|codeLangs|Code languages to load for the highlighter. <br><br> Select from this list: https://github.com/PrismJS/prism/tree/master/components <br><br> Each TutorialHighlighter component will need a lang="" attribute that is one of these.|`Array`|`false`|['clike', 'markup', 'javascript', 'css']|
+|codeLangs|Code languages to load for the highlighter. <br><br> Select from this list: https://github.com/PrismJS/prism/tree/master/components <br><br> Each TutorialHighlighter component will need a lang="" attribute that is one of these.|`Array`|`false`|["clike","markup","javascript","css"]|
 
 <!-- @vuese:Tutorial:props:end -->
 

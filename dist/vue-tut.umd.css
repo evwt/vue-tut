@@ -375,6 +375,73 @@
     pointer-events: auto;
     overflow-x: auto; }
 
+.vue-tut .tutorial-section {
+  margin: 50px; }
+  .vue-tut .tutorial-section header p {
+    font-size: 16px;
+    line-height: 1.4; }
+  .vue-tut .tutorial-section header h1 {
+    font-size: 20px; }
+  .vue-tut .tutorial-section header h2 {
+    font-size: 26px; }
+  .vue-tut .tutorial-section:last-child {
+    margin-bottom: 0; }
+
+.vue-tut .tutorial-highlighter {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 10px 5px 5px 0;
+  cursor: text; }
+
+.vue-tut .prism-editor-wrapper .prism-editor__container {
+  overflow-x: auto; }
+
+.vue-tut .prism-editor__textarea:focus {
+  outline: none; }
+
+.vue-tut .prism-editor__editor {
+  white-space: pre !important; }
+
+.vue-tut .prism-editor-wrapper {
+  font-size: 14px !important; }
+  .vue-tut .prism-editor-wrapper * {
+    font-size: 14px !important; }
+
+.vue-tut .prism-editor__line-numbers {
+  user-select: none;
+  cursor: default;
+  margin-right: 20px;
+  min-width: 42px;
+  background: transparent !important;
+  overflow: visible; }
+
+.vue-tut .prism-editor__line-number {
+  border-left: 5px solid transparent;
+  padding-left: 10px;
+  position: relative; }
+
+.vue-tut .prism-editor__line-number.highlight-line {
+  border-left: 5px solid gray;
+  background: rgba(128, 128, 128, 0.384); }
+
+.vue-tut .prism-editor__line-number.highlight-line:after {
+  content: "";
+  height: 21px;
+  background: rgba(128, 128, 128, 0.384);
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+  max-width: 920px;
+  width: calc(50vw + 58px) !important; }
+
+.vue-tut textarea {
+  display: none !important; }
+
+.vue-tut pre > span {
+  position: relative;
+  z-index: 1; }
+
 .vue-tut {
   background-color: #fff;
   color: #333;
@@ -399,18 +466,6 @@
     display: none; }
   .vue-tut .step-assets .step-after {
     display: none; }
-
-.vue-tut .tutorial-section {
-  margin: 50px; }
-  .vue-tut .tutorial-section header p {
-    font-size: 16px;
-    line-height: 1.4; }
-  .vue-tut .tutorial-section header h1 {
-    font-size: 20px; }
-  .vue-tut .tutorial-section header h2 {
-    font-size: 26px; }
-  .vue-tut .tutorial-section:last-child {
-    margin-bottom: 0; }
 
 .vue-tut .steps {
   padding-top: 50px; }
@@ -499,70 +554,6 @@
   right: 0;
   bottom: 0; }
 
-.vue-tut .fade-enter-active {
-  transition: opacity .75s; }
-
-.vue-tut .fade-leave-active {
-  transition: opacity .75s; }
-
-.vue-tut .fade-enter, .vue-tut .fade-leave-to {
-  opacity: 0; }
-
-.vue-tut .tutorial-highlighter {
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-  font-size: 14px;
-  line-height: 1.5;
-  padding: 10px 5px 5px 0;
-  cursor: text; }
-
-.vue-tut .prism-editor-wrapper .prism-editor__container {
-  overflow-x: auto; }
-
-.vue-tut .prism-editor__textarea:focus {
-  outline: none; }
-
-.vue-tut .prism-editor__editor {
-  white-space: pre !important; }
-
-.vue-tut .prism-editor-wrapper {
-  font-size: 14px !important; }
-  .vue-tut .prism-editor-wrapper * {
-    font-size: 14px !important; }
-
-.vue-tut .prism-editor__line-numbers {
-  user-select: none;
-  cursor: default;
-  margin-right: 20px;
-  min-width: 42px;
-  background: transparent !important;
-  overflow: visible; }
-
-.vue-tut .prism-editor__line-number {
-  border-left: 5px solid transparent;
-  padding-left: 10px;
-  position: relative; }
-
-.vue-tut .prism-editor__line-number.highlight-line {
-  border-left: 5px solid gray;
-  background: rgba(128, 128, 128, 0.384); }
-
-.vue-tut .prism-editor__line-number.highlight-line:after {
-  content: "";
-  height: 21px;
-  background: rgba(128, 128, 128, 0.384);
-  pointer-events: none;
-  position: absolute;
-  z-index: 1;
-  max-width: 920px;
-  width: calc(50vw + 58px) !important; }
-
-.vue-tut textarea {
-  display: none !important; }
-
-.vue-tut pre > span {
-  position: relative;
-  z-index: 1; }
-
 @media only screen and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
   main.vue-tut .prism-editor-wrapper .prism-editor__line-numbers .prism-editor__line-number {
     font-size: 16px !important;
@@ -615,6 +606,15 @@
     padding-bottom: 70px; }
   main.vue-tut .step-wrapper:first-child .step {
     margin-top: 40px; } }
+
+.vue-tut .fade-enter-active {
+  transition: opacity .75s; }
+
+.vue-tut .fade-leave-active {
+  transition: opacity .75s; }
+
+.vue-tut .fade-enter, .vue-tut .fade-leave-to {
+  opacity: 0; }
 
 pre {
   font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
