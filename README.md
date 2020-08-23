@@ -112,7 +112,8 @@ export default {
 ## Examples
 
 ### Hello World
-_Theme: `vue`, Code Theme: `vue`_
+<br>
+Theme: `vue`, Code Theme: `vue`
 
 <a href="https://czz5i.csb.app/" target="_blank"><img width="500" alt="Screen Shot 2020-08-20 at 6 00 39 PM" src="https://user-images.githubusercontent.com/611996/90835167-7b409280-e311-11ea-8e2d-5a685f46ad64.png"></a>
 
@@ -122,7 +123,8 @@ _Theme: `vue`, Code Theme: `vue`_
 <hr>
 
 ### C# Tutorial
-_Theme: `azure`, Code Theme: `vs`_
+<br>
+Theme: `azure`, Code Theme: `vs`
 
 <a href="https://z3e3c.csb.app/" target="_blank"><img width="500" alt="Screen Shot 2020-08-20 at 6 59 28 PM" src="https://user-images.githubusercontent.com/611996/90942041-ac849580-e3d9-11ea-818c-a1d9bc82def1.png"></a>
 
