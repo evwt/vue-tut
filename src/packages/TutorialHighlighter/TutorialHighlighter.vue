@@ -1,5 +1,5 @@
 <template>
-  <div class="prism-share-background w-100">
+  <div class="prism-share-background w-100 h-100">
     <div v-if="title" class="tutorial-highlighter-title">
       {{ title }}
     </div>

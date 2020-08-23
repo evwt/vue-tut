@@ -59,17 +59,17 @@ vue-tut themes
     <tutorial-section>
       <tutorial-step slot="step">
         <p>...</p>
-        <tutorial-highlighter slot="aside" :highlight-lines="[2]" :text="step1" />
+        <tutorial-highlighter slot="aside" :highlight-lines="[2]" :text="step1" title="file.txt" />
       </tutorial-step>
 
       <tutorial-step slot="step">
         <p>...</p>
-        <tutorial-highlighter slot="aside" :highlight-lines="[/script/]" :text="step2" />
+        <tutorial-highlighter slot="aside" :highlight-lines="[/script/]" :text="step2" title="file.txt" />
       </tutorial-step>
 
       <tutorial-step slot="step">
         <p>...</p>
-        <tutorial-highlighter slot="aside" :highlight-lines="['10:14']" :text="step3" />
+        <tutorial-highlighter slot="aside" :highlight-lines="['10:14']" :text="step3" title="file.txt" />
       </tutorial-step>
     </tutorial-section>
   </tutorial>

@@ -2070,7 +2070,7 @@ var __vue_render__$3 = function() {
   var _c = _vm._self._c || _h;
   return _c(
     "div",
-    { staticClass: "prism-share-background w-100" },
+    { staticClass: "prism-share-background w-100 h-100" },
     [
       _vm.title
         ? _c("div", { staticClass: "tutorial-highlighter-title" }, [
