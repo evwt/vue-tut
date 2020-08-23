@@ -39,7 +39,6 @@
     "build:css": "./scripts/buildThemes.sh"
   },
   "dependencies": {
-    "babel-plugin-wildcard": "^6.0.0",
     "core-js": "^3.6.5",
     "lodash": "^4.17.20",
     "prism-themes": "^1.4.0",

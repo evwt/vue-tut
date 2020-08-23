@@ -26,7 +26,7 @@
       </div>
 
       <div class="step-after">
-        <!-- Content to display after and outsize the step box -->
+        <!-- Content to display after and outside the step box -->
         <slot name="after" />
       </div>
     </div>
