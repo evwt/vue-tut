@@ -11,6 +11,7 @@
     padding: 13px 15px 0px 62px;
     font-size: 18px;
     font-weight: bold;
+    height: 36px;
   }
 
   .prism-editor-wrapper .prism-editor__container {
@@ -27,6 +28,7 @@
   }
 
   .prism-editor-wrapper {
+    height: calc(100% - 36px);
     font-size: 14px !important;
 
     * {
