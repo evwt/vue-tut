@@ -1,0 +1,79 @@
+pre {
+  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
+  color: #525252;
+  background: #f8f8f8;
+}
+
+.token.selector,
+.token.tag,
+.token.tag .token.title,
+.token.change,
+.token.winutils,
+.token.flow,
+.token.tex .token.special {
+  color: #2973b7;
+}
+
+.token.symbol,
+.token.symbol .token.string,
+.token.attr-value,
+.token.value,
+.token.regex,
+.token.string,
+.token.subst,
+.token.haskell .token.type,
+.token.preprocessor,
+.token.ruby .token.class .token.parent,
+.token.built_in,
+.token.sql .token.aggregate,
+.token.django .token.template_tag,
+.token.django .token.variable,
+.token.smalltalk .token.class,
+.token.javadoc,
+.token.django .token.filter .token.argument,
+.token.smalltalk .token.localvars,
+.token.smalltalk .token.array,
+.token.attr_selector,
+.token.pseudo,
+.token.addition,
+.token.stream,
+.token.envvar,
+.token.apache .token.tag,
+.token.apache .token.cbracket,
+.token.tex .token.command,
+.token.prompt {
+  color: #42b983;
+}
+.token.function .token.keyword,
+.token.constant {
+  color: #0092db;
+}
+
+.token.property,
+.token.keyword,
+.token.attribute {
+  color: #d63200;
+}
+.token.number,
+.token.literal {
+  color: #a32eff;
+}
+.token.class .token.title {
+  color: #fff;
+}
+.token.title {
+  color: #a6e22e;
+}
+.token.tag .token.value,
+.token.comment,
+.token.java .token.annotation,
+.token.python .token.decorator,
+.token.template_comment,
+.token.pi,
+.token.doctype,
+.token.deletion,
+.token.shebang,
+.token.apache .token.sqbracket,
+.token.tex .token.formula {
+  color: #707070;
+}

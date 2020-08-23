@@ -71,31 +71,6 @@
     overflow-x: auto; }
 
 .vue-tut {
-  background-color: #fff;
-  color: #333;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  text-align: left; }
-  .vue-tut .tutorial-header, .vue-tut .tutorial-footer {
-    padding: 50px; }
-    .vue-tut .tutorial-header h1, .vue-tut .tutorial-footer h1 {
-      font-size: 22px;
-      margin-bottom: 10px; }
-    .vue-tut .tutorial-header h2, .vue-tut .tutorial-footer h2 {
-      font-size: 32px;
-      margin-bottom: 25px; }
-    .vue-tut .tutorial-header p, .vue-tut .tutorial-footer p {
-      line-height: 1.4; }
-  .vue-tut .tutorial-footer {
-    min-height: 100vh; }
-  .vue-tut .tutorial-footer:empty {
-    display: none; }
-  .vue-tut .step-contents .step-aside {
-    display: none; }
-  .vue-tut .step-assets .step-after {
-    display: none; }
-
-.vue-tut {
   font-family: sans-serif;
   min-height: 100%; }
   .vue-tut h1, .vue-tut h2, .vue-tut h3, .vue-tut h4, .vue-tut h5, .vue-tut h6, .vue-tut p {
@@ -112,67 +87,60 @@
   .vue-tut *:after {
     box-sizing: border-box; }
 
-@media only screen and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
-  main.vue-tut .prism-editor-wrapper .prism-editor__line-numbers .prism-editor__line-number {
-    font-size: 16px !important;
-    line-height: 27px !important; }
-    main.vue-tut .prism-editor-wrapper .prism-editor__line-numbers .prism-editor__line-number:after {
-      height: 27px !important; }
-  main.vue-tut .prism-editor-wrapper .prism-editor__editor {
-    font-size: 18px !important;
-    line-height: 27px !important; }
-  main.vue-tut .prism-editor-wrapper .token {
-    font-size: 10px !important;
-    line-height: 6px !important; } }
+.vue-tut .tutorial-highlighter {
+  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  padding: 10px 5px 5px 0;
+  cursor: text; }
 
-@media only screen and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
-  main.vue-tut .prism-editor-wrapper .prism-editor__line-numbers .prism-editor__line-number {
-    line-height: 21px !important;
-    height: 21px !important; } }
+.vue-tut .prism-editor-wrapper .prism-editor__container {
+  overflow-x: auto; }
 
-@media all and (max-width: 980px) {
-  main.vue-tut .tutorial-header {
-    padding: 15px;
-    margin-bottom: 5px; }
-    main.vue-tut .tutorial-header > h1.m-s-sm {
-      margin-bottom: 5px; }
-    main.vue-tut .tutorial-header > h2.m-s-xl {
-      margin-bottom: 15px; }
-  main.vue-tut .sections .tutorial-section {
-    margin: 15px; }
-  main.vue-tut .step {
-    margin-top: 40px;
-    margin-bottom: 20px; }
-  main.vue-tut .steps {
-    padding-top: 0; }
-  main.vue-tut .steps > .step-contents {
-    width: 100%;
-    margin: 0; }
-  main.vue-tut .step-contents .step-aside {
-    display: block; }
-    main.vue-tut .step-contents .step-aside aside {
-      display: flex;
-      align-items: center;
-      justify-content: center; }
-    main.vue-tut .step-contents .step-aside pre {
-      white-space: pre !important; }
-    main.vue-tut .step-contents .step-aside .highlight-line:after {
-      width: calc(100vw - 62px) !important; }
-  main.vue-tut .step-assets {
-    display: none; }
-  main.vue-tut .step-wrapper {
-    padding-bottom: 70px; }
-  main.vue-tut .step-wrapper:first-child .step {
-    margin-top: 40px; } }
+.vue-tut .prism-editor__textarea:focus {
+  outline: none; }
 
-.vue-tut .fade-enter-active {
-  transition: opacity .75s; }
+.vue-tut .prism-editor__editor {
+  white-space: pre !important; }
 
-.vue-tut .fade-leave-active {
-  transition: opacity .75s; }
+.vue-tut .prism-editor-wrapper {
+  font-size: 14px !important; }
+  .vue-tut .prism-editor-wrapper * {
+    font-size: 14px !important; }
 
-.vue-tut .fade-enter, .vue-tut .fade-leave-to {
-  opacity: 0; }
+.vue-tut .prism-editor__line-numbers {
+  user-select: none;
+  cursor: default;
+  margin-right: 20px;
+  min-width: 42px;
+  background: transparent !important;
+  overflow: visible; }
+
+.vue-tut .prism-editor__line-number {
+  border-left: 5px solid transparent;
+  padding-left: 10px;
+  position: relative; }
+
+.vue-tut .prism-editor__line-number.highlight-line {
+  border-left: 5px solid gray;
+  background: rgba(128, 128, 128, 0.384); }
+
+.vue-tut .prism-editor__line-number.highlight-line:after {
+  content: "";
+  height: 21px;
+  background: rgba(128, 128, 128, 0.384);
+  pointer-events: none;
+  position: absolute;
+  z-index: 1;
+  max-width: 920px;
+  width: calc(50vw + 58px) !important; }
+
+.vue-tut textarea {
+  display: none !important; }
+
+.vue-tut pre > span {
+  position: relative;
+  z-index: 1; }
 
 .vue-tut .tutorial-section {
   margin: 50px; }
@@ -273,60 +241,92 @@
   right: 0;
   bottom: 0; }
 
-.vue-tut .tutorial-highlighter {
-  font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-  font-size: 14px;
-  line-height: 1.5;
-  padding: 10px 5px 5px 0;
-  cursor: text; }
+.vue-tut {
+  background-color: #fff;
+  color: #333;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-align: left; }
+  .vue-tut .tutorial-header, .vue-tut .tutorial-footer {
+    padding: 50px; }
+    .vue-tut .tutorial-header h1, .vue-tut .tutorial-footer h1 {
+      font-size: 22px;
+      margin-bottom: 10px; }
+    .vue-tut .tutorial-header h2, .vue-tut .tutorial-footer h2 {
+      font-size: 32px;
+      margin-bottom: 25px; }
+    .vue-tut .tutorial-header p, .vue-tut .tutorial-footer p {
+      line-height: 1.4; }
+  .vue-tut .tutorial-footer {
+    min-height: 100vh; }
+  .vue-tut .tutorial-footer:empty {
+    display: none; }
+  .vue-tut .step-contents .step-aside {
+    display: none; }
+  .vue-tut .step-assets .step-after {
+    display: none; }
 
-.vue-tut .prism-editor-wrapper .prism-editor__container {
-  overflow-x: auto; }
+.vue-tut .fade-enter-active {
+  transition: opacity .75s; }
 
-.vue-tut .prism-editor__textarea:focus {
-  outline: none; }
+.vue-tut .fade-leave-active {
+  transition: opacity .75s; }
 
-.vue-tut .prism-editor__editor {
-  white-space: pre !important; }
+.vue-tut .fade-enter, .vue-tut .fade-leave-to {
+  opacity: 0; }
 
-.vue-tut .prism-editor-wrapper {
-  font-size: 14px !important; }
-  .vue-tut .prism-editor-wrapper * {
-    font-size: 14px !important; }
+@media only screen and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  main.vue-tut .prism-editor-wrapper .prism-editor__line-numbers .prism-editor__line-number {
+    font-size: 16px !important;
+    line-height: 27px !important; }
+    main.vue-tut .prism-editor-wrapper .prism-editor__line-numbers .prism-editor__line-number:after {
+      height: 27px !important; }
+  main.vue-tut .prism-editor-wrapper .prism-editor__editor {
+    font-size: 18px !important;
+    line-height: 27px !important; }
+  main.vue-tut .prism-editor-wrapper .token {
+    font-size: 10px !important;
+    line-height: 6px !important; } }
 
-.vue-tut .prism-editor__line-numbers {
-  user-select: none;
-  cursor: default;
-  margin-right: 20px;
-  min-width: 42px;
-  background: transparent !important;
-  overflow: visible; }
+@media only screen and (max-device-width: 600px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
+  main.vue-tut .prism-editor-wrapper .prism-editor__line-numbers .prism-editor__line-number {
+    line-height: 21px !important;
+    height: 21px !important; } }
 
-.vue-tut .prism-editor__line-number {
-  border-left: 5px solid transparent;
-  padding-left: 10px;
-  position: relative; }
-
-.vue-tut .prism-editor__line-number.highlight-line {
-  border-left: 5px solid gray;
-  background: rgba(128, 128, 128, 0.384); }
-
-.vue-tut .prism-editor__line-number.highlight-line:after {
-  content: "";
-  height: 21px;
-  background: rgba(128, 128, 128, 0.384);
-  pointer-events: none;
-  position: absolute;
-  z-index: 1;
-  max-width: 920px;
-  width: calc(50vw + 58px) !important; }
-
-.vue-tut textarea {
-  display: none !important; }
-
-.vue-tut pre > span {
-  position: relative;
-  z-index: 1; }
+@media all and (max-width: 980px) {
+  main.vue-tut .tutorial-header {
+    padding: 15px;
+    margin-bottom: 5px; }
+    main.vue-tut .tutorial-header > h1.m-s-sm {
+      margin-bottom: 5px; }
+    main.vue-tut .tutorial-header > h2.m-s-xl {
+      margin-bottom: 15px; }
+  main.vue-tut .sections .tutorial-section {
+    margin: 15px; }
+  main.vue-tut .step {
+    margin-top: 40px;
+    margin-bottom: 20px; }
+  main.vue-tut .steps {
+    padding-top: 0; }
+  main.vue-tut .steps > .step-contents {
+    width: 100%;
+    margin: 0; }
+  main.vue-tut .step-contents .step-aside {
+    display: block; }
+    main.vue-tut .step-contents .step-aside aside {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+    main.vue-tut .step-contents .step-aside pre {
+      white-space: pre !important; }
+    main.vue-tut .step-contents .step-aside .highlight-line:after {
+      width: calc(100vw - 62px) !important; }
+  main.vue-tut .step-assets {
+    display: none; }
+  main.vue-tut .step-wrapper {
+    padding-bottom: 70px; }
+  main.vue-tut .step-wrapper:first-child .step {
+    margin-top: 40px; } }
 
 .vue-tut .h-100 {
   height: 100%; }
@@ -615,83 +615,3 @@
 
 .vue-tut .m-xl {
   margin: 25px; }
-
-pre {
-  font-family: "Source Sans Pro", "Helvetica Neue", Arial, sans-serif;
-  color: #525252;
-  background: #f8f8f8;
-}
-
-.token.selector,
-.token.tag,
-.token.tag .token.title,
-.token.change,
-.token.winutils,
-.token.flow,
-.token.tex .token.special {
-  color: #2973b7;
-}
-
-.token.symbol,
-.token.symbol .token.string,
-.token.attr-value,
-.token.value,
-.token.regex,
-.token.string,
-.token.subst,
-.token.haskell .token.type,
-.token.preprocessor,
-.token.ruby .token.class .token.parent,
-.token.built_in,
-.token.sql .token.aggregate,
-.token.django .token.template_tag,
-.token.django .token.variable,
-.token.smalltalk .token.class,
-.token.javadoc,
-.token.django .token.filter .token.argument,
-.token.smalltalk .token.localvars,
-.token.smalltalk .token.array,
-.token.attr_selector,
-.token.pseudo,
-.token.addition,
-.token.stream,
-.token.envvar,
-.token.apache .token.tag,
-.token.apache .token.cbracket,
-.token.tex .token.command,
-.token.prompt {
-  color: #42b983;
-}
-.token.function .token.keyword,
-.token.constant {
-  color: #0092db;
-}
-
-.token.property,
-.token.keyword,
-.token.attribute {
-  color: #d63200;
-}
-.token.number,
-.token.literal {
-  color: #a32eff;
-}
-.token.class .token.title {
-  color: #fff;
-}
-.token.title {
-  color: #a6e22e;
-}
-.token.tag .token.value,
-.token.comment,
-.token.java .token.annotation,
-.token.python .token.decorator,
-.token.template_comment,
-.token.pi,
-.token.doctype,
-.token.deletion,
-.token.shebang,
-.token.apache .token.sqbracket,
-.token.tex .token.formula {
-  color: #707070;
-}

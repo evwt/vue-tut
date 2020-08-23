@@ -17,12 +17,39 @@ npm i vue-tut
 ```js
 import VueTut from 'vue-tut';
 import 'vue-tut/dist/vue-tut.min.css';
-// Try one of these themes, or neither
-// import 'vue-tut/dist/themes/vue.css';
-// import 'vue-tut/dist/themes/azure.css';
+
+// Select a tutorial theme
+import 'vue-tut/dist/themes/vue.css';
+
+// Select a code highlighting theme
+import 'vue-tut/dist/code-themes/vue.css';
 
 Vue.use(VueTut);
 ```
+
+### Themes
+
+#### Tutorial
+
+`vue` or `azure`
+
+#### Highlighting
+
+<a href="https://github.com/PrismJS/prism-themes">prism-themes themes</a>
+<br>
+`a11y-dark` / `atom-dark` / `base16-ateliersulphurpool.light` / `cb` / `darcula` / `dracula` / `duotone-dark` / `duotone-earth` / `duotone-forest` / `duotone-light` / `duotone-sea` / `duotone-space` / `ghcolors` / `hopscotch` / `material-dark` / `material-light` / `material-oceanic` / `nord` / `pojoaque` / `shades-of-purple` / `synthwave84` / `vs` / `vsc-dark-plus` / `xonokai`
+<br><br>
+<a href="https://prismjs.com/">Official themes</a>
+<br>
+`coy` / `dark` / `funky` / `okaidia` / `prism` / `solarizedlight` / `tomorrow` / `twilight`
+<br><br>
+vue-tut themes
+<br>
+`vue`
+
+### Languages
+
+`abap` / `abnf` / `actionscript` / `ada` / `agda` / `al` / `antlr4` / `apacheconf` / `apl` / `applescript` / `aql` / `arduino` / `arff` / `asciidoc` / `asm6502` / `aspnet` / `autohotkey` / `autoit` / `bash` / `basic` / `batch` / `bbcode` / `bison` / `bnf` / `brainfuck` / `brightscript` / `bro` / `bsl` / `c` / `cil` / `clike` / `clojure` / `cmake` / `coffeescript` / `concurnas` / `core` / `cpp` / `crystal` / `csharp` / `csp` / `css-extras` / `css` / `cypher` / `d` / `dart` / `dax` / `dhall` / `diff` / `django` / `dns-zone-file` / `docker` / `ebnf` / `editorconfig` / `eiffel` / `ejs` / `elixir` / `elm` / `erb` / `erlang` / `etlua` / `excel-formula` / `factor` / `firestore-security-rules` / `flow` / `fortran` / `fsharp` / `ftl` / `gcode` / `gdscript` / `gedcom` / `gherkin` / `git` / `glsl` / `gml` / `go` / `graphql` / `groovy` / `haml` / `handlebars` / `haskell` / `haxe` / `hcl` / `hlsl` / `hpkp` / `hsts` / `http` / `ichigojam` / `icon` / `iecst` / `ignore` / `inform7` / `ini` / `io` / `j` / `java` / `javadoc` / `javadoclike` / `javascript` / `javastacktrace` / `jolie` / `jq` / `js-extras` / `js-templates` / `jsdoc` / `json` / `json5` / `jsonp` / `jsstacktrace` / `jsx` / `julia` / `keyman` / `kotlin` / `latex` / `latte` / `less` / `lilypond` / `liquid` / `lisp` / `livescript` / `llvm` / `lolcode` / `lua` / `makefile` / `markdown` / `markup-templating` / `markup` / `matlab` / `mel` / `mizar` / `mongodb` / `monkey` / `moonscript` / `n1ql` / `n4js` / `nand2tetris-hdl` / `naniscript` / `nasm` / `neon` / `nginx` / `nim` / `nix` / `nsis` / `objectivec` / `ocaml` / `opencl` / `oz` / `parigp` / `parser` / `pascal` / `pascaligo` / `pcaxis` / `peoplecode` / `perl` / `php-extras` / `php` / `phpdoc` / `plsql` / `powerquery` / `powershell` / `processing` / `prolog` / `properties` / `protobuf` / `pug` / `puppet` / `pure` / `purebasic` / `python` / `q` / `qml` / `qore` / `r` / `racket` / `reason` / `regex` / `renpy` / `rest` / `rip` / `roboconf` / `robotframework` / `ruby` / `rust` / `sas` / `sass` / `scala` / `scheme` / `scss` / `shell-session` / `smali` / `smalltalk` / `smarty` / `solidity` / `solution-file` / `soy` / `sparql` / `splunk-spl` / `sqf` / `sql` / `stan` / `stylus` / `swift` / `t4-cs` / `t4-templating` / `t4-vb` / `tap` / `tcl` / `textile` / `toml` / `tsx` / `tt2` / `turtle` / `twig` / `typescript` / `typoscript` / `unrealscript` / `vala` / `vbnet` / `velocity` / `verilog` / `vhdl` / `vim` / `visual-basic` / `vue` / `warpscript` / `wasm` / `wiki` / `xeora` / `xml-doc` / `xojo` / `xquery` / `yaml` / `yang` / `zig`
 
 ## Usage
 
@@ -80,7 +107,7 @@ export default {
 </script>
 ```
 
-<a href="https://vn192.csb.app/" target="_blank">Result</a>
+<a href="https://clvw9.csb.app/" target="_blank">Result</a>
 
 ## Examples
 

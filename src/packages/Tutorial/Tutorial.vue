@@ -50,36 +50,6 @@ export default {
 
   name: 'Tutorial',
 
-  props: {
-    // Color theme for the highlighter.
-    // <br><br>
-    // prism-themes themes - see previews here: https://github.com/PrismJS/prism-themes
-    // <br>
-    // `a11y-dark` / `atom-dark` / `base16-ateliersulphurpool.light` / `cb` / `darcula` / `dracula` / `duotone-dark` / `duotone-earth` / `duotone-forest` / `duotone-light` / `duotone-sea` / `duotone-space` / `ghcolors` / `hopscotch` / `material-dark` / `material-light` / `material-oceanic` / `nord` / `pojoaque` / `shades-of-purple` / `synthwave84` / `vs` / `vsc-dark-plus` / `xonokai`
-    // <br><br>
-    // Official themes - see previews here: https://prismjs.com/
-    // <br>
-    // `coy` / `dark` / `funky` / `okaidia` / `prism` / `solarizedlight` / `tomorrow` / `twilight`
-    // <br><br>
-    // vue-tut themes
-    // `vue`
-    codeTheme: {
-      type: String,
-      default: 'vue'
-    },
-
-    // Code languages to load for the highlighter.
-    // <br><br>
-    // Select from this list: https://github.com/PrismJS/prism/tree/master/components
-    // <br><br>
-    // Each TutorialHighlighter component will need a lang="" attribute that is one of these.
-
-    codeLangs: {
-      type: Array,
-      default: () => ['clike', 'markup', 'javascript', 'css']
-    }
-  },
-
   data() {
     return {
       loaded: false
@@ -87,8 +57,6 @@ export default {
   },
 
   created() {
-    this.setLangs();
-
     WebFontLoader.load({
       google: { families: ['Source Sans Pro:300,400,600:latin'] },
       active() { this.loaded = true; }
@@ -97,63 +65,6 @@ export default {
     setTimeout(() => {
       this.loaded = true;
     }, 300);
-
-    this.setTheme();
-  },
-
-  methods: {
-    async setLangs() {
-      try {
-        for (const lang of this.codeLangs) {
-          await import('prismjs/components/prism-' + lang + '.js');
-        }
-      } catch (error) {
-        console.log('[VueTut] Error loading one or more of your code-langs, is the name spelled correctly?');
-      }
-    },
-
-    async setTheme() {
-      if (this.codeTheme === 'vue') {
-        import('@/style/editor-theme/vue.css');
-      } else if ([
-        'coy',
-        'dark',
-        'funky',
-        'okaidia',
-        'prism',
-        'solarizedlight',
-        'tomorrow',
-        'twilight'
-      ].includes(this.codeTheme)) {
-        import(`prismjs/themes/prism-${this.codeTheme}.css`);
-      } else if ([
-        'a11y-dark',
-        'atom-dark',
-        'base16-ateliersulphurpool.light',
-        'cb',
-        'darcula',
-        'dracula',
-        'duotone-dark',
-        'duotone-earth',
-        'duotone-forest',
-        'duotone-light',
-        'duotone-sea',
-        'duotone-space',
-        'ghcolors',
-        'hopscotch',
-        'material-dark',
-        'material-light',
-        'material-oceanic',
-        'nord',
-        'pojoaque',
-        'shades-of-purple',
-        'synthwave84',
-        'vs',
-        'vsc-dark-plus',
-        'xonokai'].includes(this.codeTheme)) {
-        import(`prism-themes/themes/prism-${this.codeTheme}.css`);
-      }
-    }
   }
 };
 </script>

@@ -30,17 +30,18 @@
     "docs:vuese": "vuese gen",
     "docs:build": "cp README.md docs/ && npm run docs:vuese",
     "docs:watch": "nodemon --ignore docs/ --ignore vuese/ --exec npm run docs:build -e scss,js,vue,md",
-    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build": "npm run build:css & npm run docs:build & npm run build:umd & npm run build:es & npm run build:unpkg",
     "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/vue-tut.umd.js",
     "build:es": "rollup --config build/rollup.config.js --format es --file dist/vue-tut.esm.js",
     "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/vue-tut.min.js",
     "build:watch": "nodemon --ignore dist/ -e scss,js,vue --exec npm run build",
-    "build:watch:scss": "nodemon --exec 'sass themes/vue.scss dist/themes/vue.css && sass themes/azure.scss dist/themes/azure.css'"
+    "build:watch:css": "nodemon --ignore dist/ --exec ./scripts/buildThemes.sh",
+    "build:css": "./scripts/buildThemes.sh"
   },
   "dependencies": {
+    "babel-plugin-wildcard": "^6.0.0",
     "core-js": "^3.6.5",
     "lodash": "^4.17.20",
-    "p-wait-for": "^3.1.0",
     "prism-themes": "^1.4.0",
     "prismjs": "^1.21.0",
     "vue-intersect": "^1.1.6",

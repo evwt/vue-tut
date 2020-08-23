@@ -21,7 +21,6 @@ export default {
     }
   },
   external: ['vue'],
-  inlineDynamicImports: true,
   plugins: [
     alias({
       entries: [
