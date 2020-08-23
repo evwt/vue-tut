@@ -1,9 +1,14 @@
 <template>
-  <prism-editor
-    v-model="text"
-    class="tutorial-highlighter prism-share-background"
-    :highlight="highlighter"
-    line-numbers />
+  <div class="prism-share-background">
+    <div v-if="title" class="tutorial-highlighter-title">
+      {{ title }}
+    </div>
+    <prism-editor
+      v-model="text"
+      class="tutorial-highlighter prism-share-background"
+      :highlight="highlighter"
+      line-numbers />
+  </div>
 </template>
 
 <script>
@@ -36,6 +41,10 @@ export default {
     lang: {
       type: String,
       default: 'vue'
+    },
+    // Title put above the highlighter for e.g. a filename
+    title: {
+      type: String
     }
   },
 

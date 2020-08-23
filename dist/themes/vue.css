@@ -48,6 +48,9 @@
 .vue-tut .prism-editor-wrapper .prism-editor__line-number.highlight-line:after {
   background: #42b9832a;
 }
+.vue-tut .tutorial-highlighter-title {
+  color: #676767;
+}
 .vue-tut .step-intersected .step {
   border-left: 10px solid var(--tut-color-accent);
 }

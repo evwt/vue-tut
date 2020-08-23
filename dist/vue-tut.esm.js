@@ -1973,6 +1973,10 @@ var script$4 = {
     lang: {
       type: String,
       default: 'vue'
+    },
+    // Title put above the highlighter for e.g. a filename
+    title: {
+      type: String
     }
   },
 
@@ -2064,17 +2068,30 @@ var __vue_render__$3 = function() {
   var _vm = this;
   var _h = _vm.$createElement;
   var _c = _vm._self._c || _h;
-  return _c("prism-editor", {
-    staticClass: "tutorial-highlighter prism-share-background",
-    attrs: { highlight: _vm.highlighter, "line-numbers": "" },
-    model: {
-      value: _vm.text,
-      callback: function($$v) {
-        _vm.text = $$v;
-      },
-      expression: "text"
-    }
-  })
+  return _c(
+    "div",
+    { staticClass: "prism-share-background" },
+    [
+      _vm.title
+        ? _c("div", { staticClass: "tutorial-highlighter-title" }, [
+            _vm._v("\n    " + _vm._s(_vm.title) + "\n  ")
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _c("prism-editor", {
+        staticClass: "tutorial-highlighter prism-share-background",
+        attrs: { highlight: _vm.highlighter, "line-numbers": "" },
+        model: {
+          value: _vm.text,
+          callback: function($$v) {
+            _vm.text = $$v;
+          },
+          expression: "text"
+        }
+      })
+    ],
+    1
+  )
 };
 var __vue_staticRenderFns__$3 = [];
 __vue_render__$3._withStripped = true;
