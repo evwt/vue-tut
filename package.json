@@ -42,8 +42,8 @@
     "core-js": "^3.6.5",
     "lodash": "^4.17.20",
     "prism-themes": "^1.4.0",
-    "prismjs": "^1.21.0",
     "vue-intersect": "^1.1.6",
+    "vue-prism-component": "^1.2.0",
     "vue-prism-editor": "^1.2.2",
     "webfontloader": "^1.6.28"
   },

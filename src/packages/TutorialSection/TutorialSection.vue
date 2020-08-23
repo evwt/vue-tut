@@ -20,7 +20,7 @@
       </p>
     </header>
 
-    <div class="steps d-flex">
+    <div v-if="$slots.step" class="steps d-flex">
       <div class="step-contents">
         <!-- Add one or more `TutorialStep` components to this slot -->
         <slot name="step" />

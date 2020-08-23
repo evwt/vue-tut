@@ -1,9 +1,12 @@
 <template>
-  <div class="prism-share-background w-100 h-100">
+  <div
+    class="prism-share-background w-100 h-100"
+    :class="lineNumbers ? '': `no-line-numbers`">
     <div v-if="title" class="tutorial-highlighter-title">
       {{ title }}
     </div>
     <prism-editor
+      ref="editor"
       v-model="text"
       class="tutorial-highlighter prism-share-background"
       :highlight="highlighter"
@@ -45,12 +48,28 @@ export default {
     // Title put above the highlighter for e.g. a filename
     title: {
       type: String
+    },
+    // Whether or not to display line numbers
+    lineNumbers: {
+      type: Boolean,
+      default: true
+    },
+    // Automatically scroll to this line number when created
+    scrollToLine: {
+      type: Number
     }
   },
 
   async mounted() {
     this.shareBackground();
     this.highlight();
+
+    if (this.scrollToLine) {
+      let lineHeight = this.$el.querySelector('.prism-editor__line-number').offsetHeight;
+      let paddingTop = parseInt(window.getComputedStyle(this.$refs.editor.$el, null).getPropertyValue('padding-top') || 0);
+      let top = (this.scrollToLine * lineHeight) - paddingTop;
+      this.$refs.editor.$el.scrollTo({ top });
+    }
   },
 
   methods: {

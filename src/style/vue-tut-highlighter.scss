@@ -4,6 +4,8 @@
     font-size: 14px;
     line-height: 1.5;
     padding: 10px 5px 5px 0;
+
+
     cursor: text;
   }
 
@@ -74,5 +76,28 @@
   pre > span {
     position: relative;
     z-index: 1;
+  }
+
+  .no-line-numbers {
+    .prism-editor__line-numbers {
+      width: 15px;
+      min-width: 0;
+      padding: 0;
+      margin: 0;
+
+      .prism-editor__line-number {
+        width: 15px;
+        padding-left: 0 !important;
+        color: transparent !important;
+      }
+    }
+
+    .prism-editor__line-number.highlight-line:after {
+      width: calc(50vw + 64px) !important;
+    }
+
+    .tutorial-highlighter-title {
+      padding-left: 17px;
+    }
   }
 }
