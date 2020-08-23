@@ -82,7 +82,8 @@ main.vue-tut {
       }
 
       pre {
-        white-space: pre !important;
+        word-wrap: inherit;
+        white-space: pre;
       }
 
       .highlight-line:after {

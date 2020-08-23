@@ -16,7 +16,8 @@
   }
 
   .prism-editor__editor {
-    white-space: pre !important;
+    white-space: pre;
+    word-wrap: inherit;
   }
 
   .prism-editor-wrapper {
