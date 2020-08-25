@@ -2,7 +2,7 @@
   <main v-if="loaded" class="vue-tut">
     <header v-if="$slots.eyebrow || $slots.title || $slots.intro" class="tutorial-header">
       <h1 class="m-s-sm">
-        <!-- Category/summary/group of the tutorial -->
+        <!-- Category/summary/group of the tutorial that is placed above the title -->
         <slot name="eyebrow" />
       </h1>
       <h2 class="m-s-xl">
@@ -39,13 +39,6 @@ import '../../style/vue-tut-highlighter.scss';
 import '../../style/vue-tut-anim.scss';
 import '../../style/vue-tut-mobile.scss';
 
-// <img width="915" alt="90838647-03776580-e31b-11ea-8e27-00bdcb700dbe" src="https://user-images.githubusercontent.com/611996/90840195-f65c7580-e31e-11ea-893c-9f64ad753814.png">
-// <br><br>
-// Notes:
-// <br>
-// - The header slots are all optional. No tutorial header will displayed if you omit all of them.
-// <br>
-// - The footer slot is optional
 export default {
 
   name: 'Tutorial',

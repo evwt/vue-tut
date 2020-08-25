@@ -19,24 +19,21 @@
 import { PrismEditor } from 'vue-prism-editor';
 import { highlight, languages } from '@/vendor/prism';
 
-// Highlight lines of text with line numbers or regexes.
-// <br><br>
-// <img width="754" alt="Screen Shot 2020-08-21 at 5 57 48 PM" src="https://user-images.githubusercontent.com/611996/90941476-dd63cb00-e3d7-11ea-9213-111edb7570b3.png">
 export default {
   components: {
     PrismEditor
   },
 
   props: {
-    // Array of integers, strings (`'start:end'`) and/or regexes to highlight
-    highlightLines: {
-      type: Array,
-      default: () => []
-    },
     // The text to highlight
     text: {
       type: String,
       required: true
+    },
+    // Array of integers, strings (`'start:end'`) and/or regexes to highlight
+    highlightLines: {
+      type: Array,
+      default: () => []
     },
     // Language to use for syntax highlighting
     // <br><br>
