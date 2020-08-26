@@ -129,6 +129,6 @@ Theme: `azure`, Code Theme: `vs`
 
 Shows using a different language besides vue.
 
-[![Edit zealous-grass-czz5i](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/spring-cdn-z3e3c?fontsize=14&hidenavigation=1&theme=light)
+[![Edit zealous-grass-czz5i](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/spring-cdn-z3e3c?fontsize=14&hidenavigation=1&theme=light) [![Join the chat at https://gitter.im/vue-tut/community](https://badges.gitter.im/vue-tut/community.svg)](https://gitter.im/vue-tut/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 
