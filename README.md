@@ -5,7 +5,10 @@ Easily build beautiful tutorials with Vue.
 **📒  ⠀[Docs](https://evwt.github.io/vue-tut/)**
 <br>
 **🖥  ⠀[Tutorial/Demo](https://vn192.csb.app/)**
+<br>
 
+ [![Join the chat at https://gitter.im/vue-tut/community](https://badges.gitter.im/vue-tut/community.svg)](https://gitter.im/vue-tut/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+ 
 ## Install
 
 ```bash
