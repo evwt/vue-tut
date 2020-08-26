@@ -11,6 +11,7 @@
 The tutorial-step component represents a single step in your tutorial.
 
 ![Screen Shot 2020-08-25 at 11 19 12 AM](https://user-images.githubusercontent.com/611996/91201382-fe713800-e6c5-11ea-8725-03f1a3ca169d.png)
+<br>
 _Pictured above: An example step_
 
 On the left side of the screen, the current step's `default` slot content is shown in a highlighted box (1), with the number of the step within the section displayed above (2).
