@@ -46,13 +46,6 @@
 
 	//
 
-	// <img width="915" alt="90838647-03776580-e31b-11ea-8e27-00bdcb700dbe" src="https://user-images.githubusercontent.com/611996/90840195-f65c7580-e31e-11ea-893c-9f64ad753814.png">
-	// <br><br>
-	// Notes:
-	// <br>
-	// - The header slots are all optional. No tutorial header will displayed if you omit all of them.
-	// <br>
-	// - The footer slot is optional
 	var script = {
 
 	  name: 'Tutorial',
@@ -771,8 +764,6 @@
 
 	//
 
-	// <img width="915" alt="90838647-03776580-e31b-11ea-8e27-00bdcb700dbe-1" src="https://user-images.githubusercontent.com/611996/90840201-f78da280-e31e-11ea-99f4-4f2866a65d3f.png">
-
 	var script$2 = {
 	  name: 'TutorialSection',
 
@@ -1015,8 +1006,6 @@
 	};
 
 	//
-
-	// <img width="915" alt="90838647-03776580-e31b-11ea-8e27-00bdcb700dbe-2" src="https://user-images.githubusercontent.com/611996/90840198-f6f50c00-e31e-11ea-9722-99c625e2f195.png">
 
 	var script$3 = {
 	  name: 'TutorialStep',
@@ -1961,24 +1950,21 @@
 
 	//
 
-	// Highlight lines of text with line numbers or regexes.
-	// <br><br>
-	// <img width="754" alt="Screen Shot 2020-08-21 at 5 57 48 PM" src="https://user-images.githubusercontent.com/611996/90941476-dd63cb00-e3d7-11ea-9213-111edb7570b3.png">
 	var script$4 = {
 	  components: {
 	    PrismEditor
 	  },
 
 	  props: {
-	    // Array of integers, strings (`'start:end'`) and/or regexes to highlight
-	    highlightLines: {
-	      type: Array,
-	      default: () => []
-	    },
 	    // The text to highlight
 	    text: {
 	      type: String,
 	      required: true
+	    },
+	    // Array of integers, ranges (`'start:end'`) and/or regexes to highlight
+	    highlightLines: {
+	      type: Array,
+	      default: () => []
 	    },
 	    // Language to use for syntax highlighting
 	    // <br><br>
@@ -2066,7 +2052,7 @@
 	    },
 
 	    highlightLineRegex(highlightRegex) {
-	      let lines = this.text.split('\n').map((line, idx) => line.match(highlightRegex) && idx).filter(v => v);
+	      let lines = this.text.split('\n').map((line, idx) => (line.match(highlightRegex) ? idx : null)).filter(v => v !== null);
 
 	      for (const line of lines) {
 	        let lineEl = this.$el.querySelector(`.prism-editor__line-number:nth-child(${line + 2})`);

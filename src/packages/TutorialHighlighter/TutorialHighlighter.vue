@@ -121,7 +121,7 @@ export default {
     },
 
     highlightLineRegex(highlightRegex) {
-      let lines = this.text.split('\n').map((line, idx) => line.match(highlightRegex) && idx).filter(v => v);
+      let lines = this.text.split('\n').map((line, idx) => (line.match(highlightRegex) ? idx : null)).filter(v => v !== null);
 
       for (const line of lines) {
         let lineEl = this.$el.querySelector(`.prism-editor__line-number:nth-child(${line + 2})`);
