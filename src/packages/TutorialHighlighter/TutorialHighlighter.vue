@@ -30,7 +30,7 @@ export default {
       type: String,
       required: true
     },
-    // Array of integers, strings (`'start:end'`) and/or regexes to highlight
+    // Array of integers, ranges (`'start:end'`) and/or regexes to highlight
     highlightLines: {
       type: Array,
       default: () => []
